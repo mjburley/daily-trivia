@@ -5,6 +5,7 @@ import QuizCard from './components/QuizCard'
 import ResultsScreen from './components/ResultsScreen'
 import { quizzes } from './data/questions'
 import { mathsQuizzes } from './data/mathsQuestions'
+import { frenchQuizzes } from './data/frenchQuestions'
 
 // App states
 const APP_STATE = {
@@ -48,6 +49,7 @@ function App() {
   const getQuizData = useCallback(() => {
     if (selectedCategory === 'trivia') return quizzes
     if (selectedCategory === 'maths') return mathsQuizzes
+    if (selectedCategory === 'french') return frenchQuizzes
     return {}
   }, [selectedCategory])
 
@@ -59,7 +61,7 @@ function App() {
 
   // Start the quiz with a specific quiz type
   const handleStartQuiz = useCallback((quizId) => {
-    const quizData = selectedCategory === 'trivia' ? quizzes : mathsQuizzes
+    const quizData = selectedCategory === 'trivia' ? quizzes : selectedCategory === 'maths' ? mathsQuizzes : frenchQuizzes
     const questionPool = quizData[quizId].questions
     const randomQuestions = getRandomQuestions(questionPool, QUESTIONS_PER_GAME)
 
@@ -148,7 +150,7 @@ function App() {
             onStartQuiz={handleStartQuiz}
             quizzes={getQuizData()}
             onGoHome={handleGoHome}
-            categoryTitle={selectedCategory === 'trivia' ? 'Quiz' : 'Maths Problems'}
+            categoryTitle={selectedCategory === 'trivia' ? 'Quiz' : selectedCategory === 'maths' ? 'Maths Problems' : 'French'}
           />
         )}
 

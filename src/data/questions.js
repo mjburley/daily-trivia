@@ -2,1096 +2,196 @@ export const quizzes = {
   spaceTech: {
     id: 'spaceTech',
     title: 'Space & Technology',
-    description: 'Test your knowledge about the cosmos and cutting-edge tech.',
+    description: 'Discover amazing facts about space and gadgets!',
     icon: 'rocket',
     color: 'purple',
     questions: [
-      {
-        id: 1,
-        question: "What is the approximate age of the universe?",
-        choices: ["4.5 billion years", "13.8 billion years", "100 billion years", "1 trillion years"],
-        correctAnswer: 1,
-        explanation: "The universe is approximately 13.8 billion years old, as determined by measurements of cosmic microwave background radiation."
-      },
-      {
-        id: 2,
-        question: "Which company launched the first reusable orbital rocket?",
-        choices: ["Blue Origin", "NASA", "SpaceX", "Boeing"],
-        correctAnswer: 2,
-        explanation: "SpaceX achieved this milestone in 2015 with the Falcon 9, revolutionizing the space industry with reusable rocket technology."
-      },
-      {
-        id: 3,
-        question: "What is the theoretical maximum data transfer rate of USB4?",
-        choices: ["10 Gbps", "20 Gbps", "40 Gbps", "80 Gbps"],
-        correctAnswer: 2,
-        explanation: "USB4 supports speeds up to 40 Gbps, with USB4 Version 2.0 supporting up to 80 Gbps using the updated protocol."
-      },
-      {
-        id: 4,
-        question: "Which planet in our solar system has the strongest magnetic field?",
-        choices: ["Earth", "Saturn", "Jupiter", "Neptune"],
-        correctAnswer: 2,
-        explanation: "Jupiter has the strongest magnetic field of any planet in our solar system, about 20,000 times stronger than Earth's."
-      },
-      {
-        id: 5,
-        question: "What programming language was used to write the first version of Linux kernel?",
-        choices: ["Assembly only", "C and Assembly", "C++ and C", "Fortran"],
-        correctAnswer: 1,
-        explanation: "Linus Torvalds wrote the original Linux kernel primarily in C with some Assembly language for hardware-specific operations."
-      },
-      {
-        id: 6,
-        question: "What is the name of the largest known structure in the universe?",
-        choices: ["Sloan Great Wall", "Hercules-Corona Borealis Great Wall", "Laniakea Supercluster", "Boötes Void"],
-        correctAnswer: 1,
-        explanation: "The Hercules-Corona Borealis Great Wall is the largest known structure, spanning about 10 billion light-years across."
-      },
-      {
-        id: 7,
-        question: "Which spacecraft was the first to land on Mars?",
-        choices: ["Viking 1", "Mars Pathfinder", "Curiosity", "Spirit"],
-        correctAnswer: 0,
-        explanation: "NASA's Viking 1 became the first spacecraft to successfully land on Mars and complete its mission in 1976."
-      },
-      {
-        id: 8,
-        question: "What does GPU stand for?",
-        choices: ["General Processing Unit", "Graphics Processing Unit", "Graphical Performance Utility", "General Purpose Utility"],
-        correctAnswer: 1,
-        explanation: "GPU stands for Graphics Processing Unit, specialized hardware designed for rendering images and parallel processing."
-      },
-      {
-        id: 9,
-        question: "How long does light from the Sun take to reach Earth?",
-        choices: ["About 8 seconds", "About 8 minutes", "About 8 hours", "About 8 days"],
-        correctAnswer: 1,
-        explanation: "Light travels at about 299,792 km/s and takes approximately 8 minutes and 20 seconds to travel from the Sun to Earth."
-      },
-      {
-        id: 10,
-        question: "What is the most abundant element in the universe?",
-        choices: ["Oxygen", "Carbon", "Helium", "Hydrogen"],
-        correctAnswer: 3,
-        explanation: "Hydrogen makes up about 75% of all normal matter in the universe by mass, formed during the Big Bang."
-      },
-      {
-        id: 11,
-        question: "Which company developed the first commercially successful smartphone?",
-        choices: ["Nokia", "BlackBerry", "Apple", "Samsung"],
-        correctAnswer: 2,
-        explanation: "While not the first smartphone, Apple's iPhone (2007) revolutionized the industry and became the first commercially dominant smartphone."
-      },
-      {
-        id: 12,
-        question: "What is the escape velocity from Earth's surface?",
-        choices: ["7.9 km/s", "11.2 km/s", "15.3 km/s", "25.0 km/s"],
-        correctAnswer: 1,
-        explanation: "Earth's escape velocity is approximately 11.2 km/s (about 40,320 km/h), the minimum speed needed to escape Earth's gravity."
-      },
-      {
-        id: 13,
-        question: "What type of memory loses its data when power is turned off?",
-        choices: ["ROM", "SSD", "RAM", "HDD"],
-        correctAnswer: 2,
-        explanation: "RAM (Random Access Memory) is volatile memory that requires power to maintain stored information."
-      },
-      {
-        id: 14,
-        question: "Which moon in our solar system has a thick atmosphere?",
-        choices: ["Europa", "Ganymede", "Titan", "Io"],
-        correctAnswer: 2,
-        explanation: "Saturn's moon Titan has a dense atmosphere composed mainly of nitrogen, thicker than Earth's atmosphere."
-      },
-      {
-        id: 15,
-        question: "What year was the World Wide Web invented?",
-        choices: ["1985", "1989", "1993", "1995"],
-        correctAnswer: 1,
-        explanation: "Tim Berners-Lee invented the World Wide Web in 1989 while working at CERN, revolutionizing information sharing."
-      },
-      {
-        id: 16,
-        question: "What is the smallest planet in our solar system?",
-        choices: ["Mars", "Mercury", "Venus", "Pluto"],
-        correctAnswer: 1,
-        explanation: "Mercury is the smallest planet in our solar system with a diameter of about 4,879 km. Pluto is no longer classified as a planet."
-      },
-      {
-        id: 17,
-        question: "What does 'HTTP' stand for?",
-        choices: ["HyperText Transfer Protocol", "High Transfer Text Protocol", "HyperText Transmission Process", "High Tech Transfer Protocol"],
-        correctAnswer: 0,
-        explanation: "HTTP stands for HyperText Transfer Protocol, the foundation of data communication on the World Wide Web."
-      },
-      {
-        id: 18,
-        question: "Which space telescope was launched in 1990 and is still operational?",
-        choices: ["James Webb", "Hubble", "Spitzer", "Kepler"],
-        correctAnswer: 1,
-        explanation: "The Hubble Space Telescope was launched in 1990 and continues to provide stunning images and scientific data."
-      },
-      {
-        id: 19,
-        question: "What is the main component of a quantum computer's processing unit?",
-        choices: ["Transistor", "Qubit", "Capacitor", "Resistor"],
-        correctAnswer: 1,
-        explanation: "Qubits (quantum bits) are the fundamental units of quantum computing, capable of existing in multiple states simultaneously."
-      },
-      {
-        id: 20,
-        question: "How many Earth days does it take Mars to orbit the Sun?",
-        choices: ["365 days", "487 days", "687 days", "842 days"],
-        correctAnswer: 2,
-        explanation: "Mars takes approximately 687 Earth days to complete one orbit around the Sun, nearly twice as long as Earth."
-      },
-      {
-        id: 21,
-        question: "What technology does Bluetooth use for communication?",
-        choices: ["Infrared", "Radio waves", "Microwaves", "Sound waves"],
-        correctAnswer: 1,
-        explanation: "Bluetooth uses radio waves in the 2.4 GHz ISM band to transmit data wirelessly between devices."
-      },
-      {
-        id: 22,
-        question: "What is a black hole's event horizon?",
-        choices: ["Its core", "The point of no return", "Its outer atmosphere", "The accretion disk"],
-        correctAnswer: 1,
-        explanation: "The event horizon is the boundary beyond which nothing, not even light, can escape the black hole's gravitational pull."
-      },
-      {
-        id: 23,
-        question: "Which programming language was created by Guido van Rossum?",
-        choices: ["Java", "Ruby", "Python", "JavaScript"],
-        correctAnswer: 2,
-        explanation: "Guido van Rossum created Python in 1991, named after Monty Python's Flying Circus comedy group."
-      },
-      {
-        id: 24,
-        question: "What is the closest star to our solar system?",
-        choices: ["Alpha Centauri A", "Proxima Centauri", "Barnard's Star", "Sirius"],
-        correctAnswer: 1,
-        explanation: "Proxima Centauri is the closest star to our Sun at about 4.24 light-years away, part of the Alpha Centauri system."
-      },
-      {
-        id: 25,
-        question: "What does SSD stand for in computer storage?",
-        choices: ["Super Speed Drive", "Solid State Drive", "System Storage Device", "Serial Speed Disk"],
-        correctAnswer: 1,
-        explanation: "SSD stands for Solid State Drive, using flash memory instead of spinning disks for faster, more reliable storage."
-      },
-      {
-        id: 26,
-        question: "What is the Great Red Spot on Jupiter?",
-        choices: ["A volcano", "An impact crater", "A giant storm", "A mountain"],
-        correctAnswer: 2,
-        explanation: "The Great Red Spot is a persistent anticyclonic storm larger than Earth that has been observed for over 400 years."
-      },
-      {
-        id: 27,
-        question: "Who founded Tesla, Inc.?",
-        choices: ["Elon Musk", "Martin Eberhard and Marc Tarpenning", "Jeff Bezos", "Larry Page"],
-        correctAnswer: 1,
-        explanation: "Tesla was founded in 2003 by Martin Eberhard and Marc Tarpenning. Elon Musk joined as chairman and lead investor in 2004."
-      },
-      {
-        id: 28,
-        question: "What is the Kuiper Belt?",
-        choices: ["An asteroid belt between Mars and Jupiter", "A region beyond Neptune with icy bodies", "Saturn's ring system", "A belt of radiation around Earth"],
-        correctAnswer: 1,
-        explanation: "The Kuiper Belt is a region of the solar system beyond Neptune, home to dwarf planets like Pluto and many icy bodies."
-      },
-      {
-        id: 29,
-        question: "What does AI stand for in technology?",
-        choices: ["Automated Intelligence", "Artificial Intelligence", "Advanced Integration", "Algorithmic Interface"],
-        correctAnswer: 1,
-        explanation: "AI stands for Artificial Intelligence, the simulation of human intelligence processes by computer systems."
-      },
-      {
-        id: 30,
-        question: "What phenomenon causes stars to twinkle?",
-        choices: ["Star pulsation", "Atmospheric turbulence", "Light reflection", "Solar wind"],
-        correctAnswer: 1,
-        explanation: "Stars appear to twinkle due to atmospheric turbulence on Earth, which causes light to refract unpredictably."
-      }
+      { id: 1, question: "How many planets are in our solar system?", choices: ["7", "8", "9", "10"], correctAnswer: 1, explanation: "There are 8 planets: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune." },
+      { id: 2, question: "What is the closest star to Earth?", choices: ["The Moon", "The Sun", "Mars", "A shooting star"], correctAnswer: 1, explanation: "The Sun is a star and it's the closest one to Earth - about 150 million kilometres away!" },
+      { id: 3, question: "Which planet is known as the Red Planet?", choices: ["Venus", "Jupiter", "Mars", "Saturn"], correctAnswer: 2, explanation: "Mars is called the Red Planet because of the rusty iron in its soil that makes it look red." },
+      { id: 4, question: "What is the largest planet in our solar system?", choices: ["Earth", "Saturn", "Jupiter", "Neptune"], correctAnswer: 2, explanation: "Jupiter is so big that over 1,000 Earths could fit inside it!" },
+      { id: 5, question: "Who was the first person to walk on the Moon?", choices: ["Buzz Aldrin", "Neil Armstrong", "Tim Peake", "Yuri Gagarin"], correctAnswer: 1, explanation: "Neil Armstrong walked on the Moon in 1969 and said 'That's one small step for man, one giant leap for mankind.'" },
+      { id: 6, question: "What does NASA stand for?", choices: ["North American Space Agency", "National Aeronautics and Space Administration", "New Astronaut Space Academy", "National Air and Space Association"], correctAnswer: 1, explanation: "NASA is the American space agency that sends rockets and astronauts into space." },
+      { id: 7, question: "Which planet has the most moons?", choices: ["Earth", "Mars", "Saturn", "Venus"], correctAnswer: 2, explanation: "Saturn has over 140 known moons! Jupiter is second with about 95 moons." },
+      { id: 8, question: "What is a group of stars that makes a pattern called?", choices: ["A galaxy", "A constellation", "A solar system", "A meteor shower"], correctAnswer: 1, explanation: "Constellations are patterns of stars. Famous ones include Orion the Hunter and the Big Dipper." },
+      { id: 9, question: "What keeps us on the ground and stops us floating away?", choices: ["Air", "Gravity", "The Moon", "Wind"], correctAnswer: 1, explanation: "Gravity is an invisible force that pulls things towards Earth. It's why things fall down, not up!" },
+      { id: 10, question: "What is the name of the British astronaut who went to space in 2015?", choices: ["Tim Peak", "Tim Peake", "Tom Peake", "Tim Peak"], correctAnswer: 1, explanation: "Tim Peake spent 6 months on the International Space Station and even ran the London Marathon in space!" },
+      { id: 11, question: "Which planet is famous for its beautiful rings?", choices: ["Jupiter", "Mars", "Saturn", "Uranus"], correctAnswer: 2, explanation: "Saturn's rings are made of billions of pieces of ice and rock. You can see them with a small telescope!" },
+      { id: 12, question: "What do we call a rock from space that lands on Earth?", choices: ["A comet", "An asteroid", "A meteorite", "A satellite"], correctAnswer: 2, explanation: "When space rocks survive the journey through our atmosphere and land on Earth, they're called meteorites." },
+      { id: 13, question: "How long does it take Earth to orbit the Sun?", choices: ["1 day", "1 week", "1 month", "1 year"], correctAnswer: 3, explanation: "It takes 365 days (one year) for Earth to travel all the way around the Sun." },
+      { id: 14, question: "What is the hottest planet in our solar system?", choices: ["Mercury", "Venus", "Mars", "The Sun"], correctAnswer: 1, explanation: "Venus is hottest because thick clouds trap heat like a greenhouse. It's even hotter than Mercury!" },
+      { id: 15, question: "What do astronauts wear in space?", choices: ["Jumpers", "Space suits", "Pyjamas", "Wellies"], correctAnswer: 1, explanation: "Space suits protect astronauts from extreme temperatures and provide oxygen to breathe." },
+      { id: 16, question: "What causes day and night on Earth?", choices: ["The Moon moving", "Earth spinning", "The Sun moving", "Clouds"], correctAnswer: 1, explanation: "Earth spins like a top once every 24 hours. When your side faces the Sun, it's day!" },
+      { id: 17, question: "What is a satellite?", choices: ["A type of star", "Something that orbits a planet", "A rocket", "A type of cloud"], correctAnswer: 1, explanation: "Satellites orbit planets. The Moon is a natural satellite. We also have man-made ones for TV and GPS!" },
+      { id: 18, question: "Which planet is closest to the Sun?", choices: ["Venus", "Mercury", "Earth", "Mars"], correctAnswer: 1, explanation: "Mercury is the closest planet to the Sun. It's also the smallest planet in our solar system." },
+      { id: 19, question: "What is the name of our galaxy?", choices: ["The Solar System", "The Milky Way", "The Big Dipper", "The Universe"], correctAnswer: 1, explanation: "We live in the Milky Way galaxy, which contains billions of stars including our Sun." },
+      { id: 20, question: "What causes the Moon to shine?", choices: ["It's on fire", "It makes its own light", "It reflects sunlight", "Stars behind it"], correctAnswer: 2, explanation: "The Moon doesn't make its own light - it reflects light from the Sun like a giant mirror!" },
+      { id: 21, question: "What is the International Space Station?", choices: ["A rocket", "A space laboratory where astronauts live", "A planet", "A satellite TV station"], correctAnswer: 1, explanation: "The ISS is a large spacecraft where astronauts from different countries live and do experiments." },
+      { id: 22, question: "What do we call a person who travels to space?", choices: ["An astronomer", "An astronaut", "A pilot", "A scientist"], correctAnswer: 1, explanation: "Astronauts are specially trained people who travel to space. In Russia, they're called cosmonauts!" },
+      { id: 23, question: "Which planet spins on its side?", choices: ["Mars", "Jupiter", "Uranus", "Neptune"], correctAnswer: 2, explanation: "Uranus spins on its side like a rolling ball! Scientists think something big crashed into it long ago." },
+      { id: 24, question: "What is a shooting star?", choices: ["A star falling from the sky", "A meteor burning up in our atmosphere", "A rocket", "A type of firework"], correctAnswer: 1, explanation: "Shooting stars are actually tiny space rocks burning up as they enter Earth's atmosphere. They're called meteors." },
+      { id: 25, question: "How many Earths could fit inside the Sun?", choices: ["About 100", "About 1,000", "About 1 million", "About 10"], correctAnswer: 2, explanation: "The Sun is so enormous that about 1.3 million Earths could fit inside it!" },
+      { id: 26, question: "What invention lets us talk to people far away using the internet?", choices: ["A telescope", "A video call", "A postcard", "A telescope"], correctAnswer: 1, explanation: "Video calls let us see and talk to people anywhere in the world using phones, tablets, or computers!" },
+      { id: 27, question: "What does 'www' stand for at the start of website addresses?", choices: ["World Wide Web", "Wireless Web World", "Wonderful Web World", "World Web Wireless"], correctAnswer: 0, explanation: "WWW stands for World Wide Web - it was invented by Sir Tim Berners-Lee, a British scientist!" },
+      { id: 28, question: "What do robots use to think and make decisions?", choices: ["A brain", "A computer", "Magic", "Batteries"], correctAnswer: 1, explanation: "Robots use computers and special programs to think and make decisions. This is called artificial intelligence!" },
+      { id: 29, question: "Which planet has a giant storm called the Great Red Spot?", choices: ["Mars", "Saturn", "Jupiter", "Neptune"], correctAnswer: 2, explanation: "Jupiter's Great Red Spot is a huge storm that's been raging for over 300 years. It's bigger than Earth!" },
+      { id: 30, question: "What year did humans first land on the Moon?", choices: ["1959", "1969", "1979", "1989"], correctAnswer: 1, explanation: "Apollo 11 landed on the Moon on 20th July 1969. About 600 million people watched it on TV!" }
     ]
   },
   famousBooks: {
     id: 'famousBooks',
     title: 'Famous Books',
-    description: 'How well do you know classic and modern literature?',
+    description: 'Test your knowledge of brilliant books and authors!',
     icon: 'book',
     color: 'blue',
     questions: [
-      {
-        id: 1,
-        question: "Who wrote '1984', the dystopian novel about totalitarian surveillance?",
-        choices: ["Aldous Huxley", "George Orwell", "Ray Bradbury", "Philip K. Dick"],
-        correctAnswer: 1,
-        explanation: "George Orwell published '1984' in 1949. The novel introduced concepts like 'Big Brother' and 'doublethink' that remain culturally relevant today."
-      },
-      {
-        id: 2,
-        question: "In which book does the character Atticus Finch appear as a lawyer defending an innocent man?",
-        choices: ["The Great Gatsby", "Of Mice and Men", "To Kill a Mockingbird", "The Catcher in the Rye"],
-        correctAnswer: 2,
-        explanation: "Atticus Finch is the protagonist of Harper Lee's 'To Kill a Mockingbird' (1960), defending Tom Robinson in a racially charged trial in Alabama."
-      },
-      {
-        id: 3,
-        question: "What is the name of the first book in J.R.R. Tolkien's 'The Lord of the Rings' trilogy?",
-        choices: ["The Two Towers", "The Hobbit", "The Fellowship of the Ring", "The Return of the King"],
-        correctAnswer: 2,
-        explanation: "'The Fellowship of the Ring' was published in 1954 as the first volume. 'The Hobbit' is a separate prequel novel published in 1937."
-      },
-      {
-        id: 4,
-        question: "Which Shakespeare play features the famous line 'To be, or not to be'?",
-        choices: ["Macbeth", "Othello", "Hamlet", "King Lear"],
-        correctAnswer: 2,
-        explanation: "This iconic soliloquy appears in Act 3, Scene 1 of 'Hamlet', where the Prince of Denmark contemplates existence and death."
-      },
-      {
-        id: 5,
-        question: "Who is the author of 'Pride and Prejudice'?",
-        choices: ["Charlotte Brontë", "Jane Austen", "Emily Brontë", "Mary Shelley"],
-        correctAnswer: 1,
-        explanation: "Jane Austen published 'Pride and Prejudice' in 1813. It follows Elizabeth Bennet and Mr. Darcy in one of literature's most beloved romances."
-      },
-      {
-        id: 6,
-        question: "What is the name of the protagonist in 'The Great Gatsby'?",
-        choices: ["Tom Buchanan", "Nick Carraway", "Jay Gatsby", "George Wilson"],
-        correctAnswer: 2,
-        explanation: "Jay Gatsby is the mysterious millionaire at the center of F. Scott Fitzgerald's 1925 novel, though Nick Carraway narrates the story."
-      },
-      {
-        id: 7,
-        question: "Who wrote 'One Hundred Years of Solitude'?",
-        choices: ["Pablo Neruda", "Gabriel García Márquez", "Jorge Luis Borges", "Mario Vargas Llosa"],
-        correctAnswer: 1,
-        explanation: "Gabriel García Márquez published this masterpiece of magical realism in 1967, telling the story of the Buendía family."
-      },
-      {
-        id: 8,
-        question: "In 'Harry Potter', what is the name of the pub that serves as the entrance to Diagon Alley?",
-        choices: ["The Three Broomsticks", "The Hog's Head", "The Leaky Cauldron", "The Shrieking Shack"],
-        correctAnswer: 2,
-        explanation: "The Leaky Cauldron is a famous wizarding pub in London that provides access to Diagon Alley through its back courtyard."
-      },
-      {
-        id: 9,
-        question: "Who wrote 'The Catcher in the Rye'?",
-        choices: ["J.D. Salinger", "Ernest Hemingway", "John Steinbeck", "William Faulkner"],
-        correctAnswer: 0,
-        explanation: "J.D. Salinger published 'The Catcher in the Rye' in 1951, featuring the iconic narrator Holden Caulfield."
-      },
-      {
-        id: 10,
-        question: "What is the subtitle of Mary Shelley's 'Frankenstein'?",
-        choices: ["The Modern Monster", "The Modern Prometheus", "The Modern Horror", "The Modern Creation"],
-        correctAnswer: 1,
-        explanation: "The full title is 'Frankenstein; or, The Modern Prometheus', published in 1818 when Shelley was just 20 years old."
-      },
-      {
-        id: 11,
-        question: "In which novel would you find the character of Sherlock Holmes' nemesis, Professor Moriarty?",
-        choices: ["A Study in Scarlet", "The Final Problem", "The Hound of the Baskervilles", "A Scandal in Bohemia"],
-        correctAnswer: 1,
-        explanation: "'The Final Problem' (1893) by Arthur Conan Doyle features the climactic confrontation between Holmes and Moriarty at Reichenbach Falls."
-      },
-      {
-        id: 12,
-        question: "Who wrote 'Don Quixote'?",
-        choices: ["Miguel de Cervantes", "Federico García Lorca", "Carlos Ruiz Zafón", "Arturo Pérez-Reverte"],
-        correctAnswer: 0,
-        explanation: "Miguel de Cervantes published 'Don Quixote' in two parts (1605 and 1615), widely considered the first modern novel."
-      },
-      {
-        id: 13,
-        question: "What is the name of the estate in 'Wuthering Heights'?",
-        choices: ["Thornfield Hall", "Wuthering Heights", "Pemberley", "Manderley"],
-        correctAnswer: 1,
-        explanation: "Wuthering Heights is the name of the Earnshaw family's farmhouse in Emily Brontë's 1847 novel of the same name."
-      },
-      {
-        id: 14,
-        question: "Who wrote 'The Picture of Dorian Gray'?",
-        choices: ["Charles Dickens", "Oscar Wilde", "Bram Stoker", "H.G. Wells"],
-        correctAnswer: 1,
-        explanation: "Oscar Wilde published 'The Picture of Dorian Gray' in 1890, his only novel, exploring themes of aestheticism and moral corruption."
-      },
-      {
-        id: 15,
-        question: "In 'Moby-Dick', what is Captain Ahab's ship called?",
-        choices: ["The Nautilus", "The Pequod", "The Orca", "The Endeavour"],
-        correctAnswer: 1,
-        explanation: "The Pequod is the whaling ship commanded by Captain Ahab in Herman Melville's 1851 novel 'Moby-Dick'."
-      },
-      {
-        id: 16,
-        question: "Who wrote 'Crime and Punishment'?",
-        choices: ["Leo Tolstoy", "Fyodor Dostoevsky", "Anton Chekhov", "Ivan Turgenev"],
-        correctAnswer: 1,
-        explanation: "Fyodor Dostoevsky published 'Crime and Punishment' in 1866, following the psychological torment of Raskolnikov after he commits murder."
-      },
-      {
-        id: 17,
-        question: "What is the real name of the protagonist in 'The Count of Monte Cristo'?",
-        choices: ["Fernand Mondego", "Edmond Dantès", "Abbé Faria", "Gérard de Villefort"],
-        correctAnswer: 1,
-        explanation: "Edmond Dantès is the young sailor who is wrongfully imprisoned and later becomes the Count of Monte Cristo in Alexandre Dumas' 1844 novel."
-      },
-      {
-        id: 18,
-        question: "Who wrote 'Brave New World'?",
-        choices: ["George Orwell", "Aldous Huxley", "H.G. Wells", "Ray Bradbury"],
-        correctAnswer: 1,
-        explanation: "Aldous Huxley published 'Brave New World' in 1932, depicting a dystopian future of genetic engineering and social conditioning."
-      },
-      {
-        id: 19,
-        question: "In 'The Chronicles of Narnia', which book comes first chronologically?",
-        choices: ["The Lion, the Witch and the Wardrobe", "The Magician's Nephew", "The Horse and His Boy", "Prince Caspian"],
-        correctAnswer: 1,
-        explanation: "'The Magician's Nephew' depicts the creation of Narnia, though 'The Lion, the Witch and the Wardrobe' was published first."
-      },
-      {
-        id: 20,
-        question: "Who is the author of 'The Handmaid's Tale'?",
-        choices: ["Ursula K. Le Guin", "Margaret Atwood", "Octavia Butler", "Doris Lessing"],
-        correctAnswer: 1,
-        explanation: "Margaret Atwood published 'The Handmaid's Tale' in 1985, a dystopian novel set in a totalitarian theocracy called Gilead."
-      },
-      {
-        id: 21,
-        question: "What is the name of the wizard school in 'A Wizard of Earthsea'?",
-        choices: ["Hogwarts", "Roke", "Brakebills", "Unseen University"],
-        correctAnswer: 1,
-        explanation: "Roke is the island where the school for wizards is located in Ursula K. Le Guin's 1968 fantasy novel 'A Wizard of Earthsea'."
-      },
-      {
-        id: 22,
-        question: "Who wrote 'The Grapes of Wrath'?",
-        choices: ["Ernest Hemingway", "John Steinbeck", "William Faulkner", "F. Scott Fitzgerald"],
-        correctAnswer: 1,
-        explanation: "John Steinbeck published 'The Grapes of Wrath' in 1939, following the Joad family during the Great Depression and Dust Bowl."
-      },
-      {
-        id: 23,
-        question: "In 'Jane Eyre', what is the name of Mr. Rochester's estate?",
-        choices: ["Thornfield Hall", "Wuthering Heights", "Pemberley", "Manderley"],
-        correctAnswer: 0,
-        explanation: "Thornfield Hall is the grand house where Jane Eyre works as a governess and falls in love with Mr. Rochester in Charlotte Brontë's 1847 novel."
-      },
-      {
-        id: 24,
-        question: "Who wrote 'Slaughterhouse-Five'?",
-        choices: ["Joseph Heller", "Kurt Vonnegut", "Ken Kesey", "Thomas Pynchon"],
-        correctAnswer: 1,
-        explanation: "Kurt Vonnegut published 'Slaughterhouse-Five' in 1969, based partly on his experiences as a POW during the bombing of Dresden."
-      },
-      {
-        id: 25,
-        question: "What is the name of the fictional African country in 'Black Panther' comics?",
-        choices: ["Zamunda", "Wakanda", "Genosha", "Latveria"],
-        correctAnswer: 1,
-        explanation: "Wakanda is the technologically advanced African nation ruled by T'Challa, the Black Panther, created by Stan Lee and Jack Kirby in 1966."
-      },
-      {
-        id: 26,
-        question: "Who wrote 'The Bell Jar'?",
-        choices: ["Virginia Woolf", "Sylvia Plath", "Anne Sexton", "Emily Dickinson"],
-        correctAnswer: 1,
-        explanation: "Sylvia Plath published 'The Bell Jar' in 1963, a semi-autobiographical novel about a young woman's mental breakdown."
-      },
-      {
-        id: 27,
-        question: "In 'Dune', what is the name of the desert planet?",
-        choices: ["Tatooine", "Arrakis", "Caladan", "Giedi Prime"],
-        correctAnswer: 1,
-        explanation: "Arrakis, also known as Dune, is the desert planet and only source of the valuable spice melange in Frank Herbert's 1965 novel."
-      },
-      {
-        id: 28,
-        question: "Who wrote 'The Road'?",
-        choices: ["Stephen King", "Cormac McCarthy", "Don DeLillo", "Philip Roth"],
-        correctAnswer: 1,
-        explanation: "Cormac McCarthy published 'The Road' in 2006, a post-apocalyptic novel about a father and son's journey that won the Pulitzer Prize."
-      },
-      {
-        id: 29,
-        question: "What is the name of the land where 'Alice's Adventures in Wonderland' takes place?",
-        choices: ["Neverland", "Narnia", "Wonderland", "Oz"],
-        correctAnswer: 2,
-        explanation: "Wonderland is the fantastical realm Alice discovers after falling down the rabbit hole in Lewis Carroll's 1865 novel."
-      },
-      {
-        id: 30,
-        question: "Who wrote 'The Hitchhiker's Guide to the Galaxy'?",
-        choices: ["Terry Pratchett", "Douglas Adams", "Neil Gaiman", "Isaac Asimov"],
-        correctAnswer: 1,
-        explanation: "Douglas Adams published 'The Hitchhiker's Guide to the Galaxy' in 1979, revealing that the answer to life, the universe, and everything is 42."
-      }
+      { id: 1, question: "Who wrote the Harry Potter books?", choices: ["Roald Dahl", "J.K. Rowling", "David Walliams", "Enid Blyton"], correctAnswer: 1, explanation: "J.K. Rowling wrote all 7 Harry Potter books. She started writing the first one in a cafe in Edinburgh!" },
+      { id: 2, question: "What is the name of Harry Potter's school?", choices: ["Hogwarts", "Pigpimples", "Wizarding Academy", "Magic School"], correctAnswer: 0, explanation: "Hogwarts School of Witchcraft and Wizardry is where Harry learns magic with his friends Ron and Hermione." },
+      { id: 3, question: "Who wrote 'Charlie and the Chocolate Factory'?", choices: ["David Walliams", "J.K. Rowling", "Roald Dahl", "Jacqueline Wilson"], correctAnswer: 2, explanation: "Roald Dahl wrote many famous children's books including Matilda, The BFG, and James and the Giant Peach." },
+      { id: 4, question: "In 'The BFG', what does BFG stand for?", choices: ["Big Friendly Giant", "Big Fat Giant", "Best Friend Giant", "Big Funny Giant"], correctAnswer: 0, explanation: "The Big Friendly Giant catches dreams and gives them to children. He's friends with a girl called Sophie." },
+      { id: 5, question: "What is the name of the boy in 'Diary of a Wimpy Kid'?", choices: ["Greg Heffley", "Greg Hefley", "George Heffley", "Gary Heffley"], correctAnswer: 0, explanation: "Greg Heffley writes about his funny adventures at school and home. The books are written like a diary with drawings!" },
+      { id: 6, question: "Who wrote 'The Gruffalo'?", choices: ["Julia Donaldson", "Roald Dahl", "Dr. Seuss", "Eric Carle"], correctAnswer: 0, explanation: "Julia Donaldson wrote The Gruffalo with illustrations by Axel Scheffler. It's about a clever mouse!" },
+      { id: 7, question: "What kind of animal is Paddington?", choices: ["A dog", "A bear", "A rabbit", "A mouse"], correctAnswer: 1, explanation: "Paddington Bear comes from Peru and loves marmalade sandwiches. He was found at Paddington Station in London!" },
+      { id: 8, question: "In Harry Potter, what is the name of Harry's owl?", choices: ["Scabbers", "Crookshanks", "Hedwig", "Errol"], correctAnswer: 2, explanation: "Hedwig is Harry's snowy white owl who delivers his letters. She was a birthday present from Hagrid." },
+      { id: 9, question: "Who wrote 'Gangsta Granny'?", choices: ["David Walliams", "Roald Dahl", "Jeff Kinney", "Liz Pichon"], correctAnswer: 0, explanation: "David Walliams wrote Gangsta Granny about a boy who discovers his granny used to be a jewel thief!" },
+      { id: 10, question: "What is the name of the cat in 'The Cat in the Hat'?", choices: ["Tom", "Felix", "The Cat in the Hat", "Whiskers"], correctAnswer: 2, explanation: "The Cat in the Hat is a famous character created by Dr. Seuss. He wears a tall red and white striped hat!" },
+      { id: 11, question: "In 'Matilda', what special power does Matilda have?", choices: ["Flying", "Invisibility", "Moving things with her mind", "Super strength"], correctAnswer: 2, explanation: "Matilda can move things using just her mind - it's called telekinesis! She uses it against the horrible Miss Trunchbull." },
+      { id: 12, question: "Who wrote 'The Worst Witch' series?", choices: ["Jill Murphy", "J.K. Rowling", "Enid Blyton", "Jacqueline Wilson"], correctAnswer: 0, explanation: "Jill Murphy wrote The Worst Witch books about Mildred Hubble at Miss Cackle's Academy for Witches." },
+      { id: 13, question: "What is the name of the naughty rabbit in Beatrix Potter's stories?", choices: ["Benjamin", "Peter", "Flopsy", "Cottontail"], correctAnswer: 1, explanation: "Peter Rabbit is always getting into trouble in Mr. McGregor's garden! Beatrix Potter wrote the stories over 100 years ago." },
+      { id: 14, question: "In 'The Lion, the Witch and the Wardrobe', how do the children get to Narnia?", choices: ["Through a mirror", "Through a wardrobe", "Through a door", "Through a painting"], correctAnswer: 1, explanation: "Lucy finds Narnia by climbing through an old wardrobe. The books were written by C.S. Lewis." },
+      { id: 15, question: "What colour is the hungry caterpillar in 'The Very Hungry Caterpillar'?", choices: ["Blue", "Red", "Green", "Yellow"], correctAnswer: 2, explanation: "Eric Carle's famous caterpillar is green with a red face. He eats through lots of food before becoming a butterfly!" },
+      { id: 16, question: "Who wrote the 'Tom Gates' series?", choices: ["Liz Pichon", "Jeff Kinney", "David Walliams", "Andy Griffiths"], correctAnswer: 0, explanation: "Liz Pichon created Tom Gates - the books are full of funny doodles and Tom's hilarious adventures!" },
+      { id: 17, question: "In Harry Potter, what house is Harry sorted into?", choices: ["Slytherin", "Ravenclaw", "Hufflepuff", "Gryffindor"], correctAnswer: 3, explanation: "Harry is sorted into Gryffindor, known for bravery. The Sorting Hat almost put him in Slytherin though!" },
+      { id: 18, question: "What is the name of the friendly spider in 'Charlotte's Web'?", choices: ["Charlotte", "Wilbur", "Templeton", "Fern"], correctAnswer: 0, explanation: "Charlotte is a clever spider who saves her friend Wilbur the pig by spinning messages in her web." },
+      { id: 19, question: "Who wrote the 'Horrible Histories' books?", choices: ["Terry Deary", "David Walliams", "Roald Dahl", "Andy Griffiths"], correctAnswer: 0, explanation: "Terry Deary wrote Horrible Histories, making history fun with gross facts and funny stories!" },
+      { id: 20, question: "In 'Wonder', what is special about Auggie?", choices: ["He can fly", "He has a facial difference", "He's invisible", "He's very tall"], correctAnswer: 1, explanation: "Auggie has a facial difference and the book is about his first year at school. The message is 'Choose Kind'." },
+      { id: 21, question: "What does Winnie-the-Pooh love to eat?", choices: ["Cake", "Honey", "Chocolate", "Apples"], correctAnswer: 1, explanation: "Pooh Bear loves honey more than anything! He was created by A.A. Milne and lives in the Hundred Acre Wood." },
+      { id: 22, question: "In 'The Twits', what do Mr and Mrs Twit have on their faces?", choices: ["Spots", "Beards", "Glasses", "Makeup"], correctAnswer: 1, explanation: "Mr Twit has a disgusting beard with bits of old food stuck in it! Mrs Twit is just as horrible." },
+      { id: 23, question: "Who is Tracy Beaker's author?", choices: ["Roald Dahl", "Jacqueline Wilson", "Enid Blyton", "Julia Donaldson"], correctAnswer: 1, explanation: "Jacqueline Wilson created Tracy Beaker, a girl living in a children's home who dreams of being adopted." },
+      { id: 24, question: "What type of creature is Dobby in Harry Potter?", choices: ["A goblin", "A troll", "A house-elf", "A ghost"], correctAnswer: 2, explanation: "Dobby is a house-elf who becomes Harry's loyal friend. He's famous for saying 'Dobby is free!'" },
+      { id: 25, question: "In 'James and the Giant Peach', how does James travel?", choices: ["In a giant apple", "In a giant peach", "In a giant orange", "In a giant banana"], correctAnswer: 1, explanation: "James travels across the ocean in a magical giant peach with his insect friends including a grasshopper and ladybird!" },
+      { id: 26, question: "What is Fantastic Mr Fox's enemy called?", choices: ["Farmers Boggis, Bunce and Bean", "The three pigs", "The Big Bad Wolf", "Farmer Brown"], correctAnswer: 0, explanation: "Fantastic Mr Fox outsmarts three nasty farmers: Boggis, Bunce, and Bean. 'One fat, one short, one lean!'" },
+      { id: 27, question: "Who lives at 221B Baker Street?", choices: ["Harry Potter", "Sherlock Holmes", "Paddington Bear", "Peter Pan"], correctAnswer: 1, explanation: "Sherlock Holmes is a famous detective created by Sir Arthur Conan Doyle. He solves mysteries with Dr Watson." },
+      { id: 28, question: "In 'The Witches', what do witches disguise themselves as?", choices: ["Teachers", "Ordinary women", "Children", "Animals"], correctAnswer: 1, explanation: "In Roald Dahl's book, witches look like ordinary women but they're bald and have square feet!" },
+      { id: 29, question: "What is the name of the dog in 'The Hundred and One Dalmatians'?", choices: ["Pongo", "Patch", "Lucky", "Spot"], correctAnswer: 0, explanation: "Pongo and his wife Perdita rescue their puppies from the evil Cruella de Vil. Dodie Smith wrote the book." },
+      { id: 30, question: "Who wrote 'The Wind in the Willows'?", choices: ["Beatrix Potter", "Kenneth Grahame", "A.A. Milne", "Enid Blyton"], correctAnswer: 1, explanation: "Kenneth Grahame wrote about Mole, Ratty, Badger, and the silly Mr Toad and his love of motor cars!" }
     ]
   },
   moviesCinema: {
     id: 'moviesCinema',
     title: 'Movies & Cinema',
-    description: 'Test your knowledge of Hollywood and world cinema.',
+    description: 'How well do you know your favourite films?',
     icon: 'film',
     color: 'pink',
     questions: [
-      {
-        id: 1,
-        question: "Which film won the first Academy Award for Best Picture in 1929?",
-        choices: ["The Jazz Singer", "Wings", "Sunrise", "The Broadway Melody"],
-        correctAnswer: 1,
-        explanation: "'Wings' (1927) won the first Best Picture Oscar at the 1929 ceremony, a silent film about World War I fighter pilots."
-      },
-      {
-        id: 2,
-        question: "Who directed 'The Godfather' trilogy?",
-        choices: ["Martin Scorsese", "Francis Ford Coppola", "Steven Spielberg", "Brian De Palma"],
-        correctAnswer: 1,
-        explanation: "Francis Ford Coppola directed all three Godfather films (1972, 1974, 1990), creating one of cinema's most acclaimed sagas."
-      },
-      {
-        id: 3,
-        question: "What was the first fully computer-animated feature film?",
-        choices: ["Shrek", "Toy Story", "A Bug's Life", "Finding Nemo"],
-        correctAnswer: 1,
-        explanation: "Pixar's 'Toy Story' (1995) was the first feature-length film made entirely with CGI animation."
-      },
-      {
-        id: 4,
-        question: "Which actor has won the most Academy Awards?",
-        choices: ["Meryl Streep", "Katharine Hepburn", "Jack Nicholson", "Daniel Day-Lewis"],
-        correctAnswer: 1,
-        explanation: "Katharine Hepburn won 4 Best Actress Oscars, more than any other actor in history."
-      },
-      {
-        id: 5,
-        question: "What is the highest-grossing film of all time (not adjusted for inflation)?",
-        choices: ["Avengers: Endgame", "Avatar", "Titanic", "Star Wars: The Force Awakens"],
-        correctAnswer: 1,
-        explanation: "James Cameron's 'Avatar' (2009) holds the record with over $2.9 billion worldwide, reclaiming the top spot after a 2022 re-release."
-      },
-      {
-        id: 6,
-        question: "Which director is known for the 'Dark Knight' trilogy?",
-        choices: ["Zack Snyder", "Christopher Nolan", "Tim Burton", "Matt Reeves"],
-        correctAnswer: 1,
-        explanation: "Christopher Nolan directed Batman Begins (2005), The Dark Knight (2008), and The Dark Knight Rises (2012)."
-      },
-      {
-        id: 7,
-        question: "What year was the first 'Star Wars' film released?",
-        choices: ["1975", "1977", "1979", "1980"],
-        correctAnswer: 1,
-        explanation: "Star Wars (later subtitled 'A New Hope') was released on May 25, 1977, revolutionizing the film industry."
-      },
-      {
-        id: 8,
-        question: "Who played the Joker in 'The Dark Knight' (2008)?",
-        choices: ["Jack Nicholson", "Jared Leto", "Heath Ledger", "Joaquin Phoenix"],
-        correctAnswer: 2,
-        explanation: "Heath Ledger's iconic performance as the Joker earned him a posthumous Academy Award for Best Supporting Actor."
-      },
-      {
-        id: 9,
-        question: "Which studio created Mickey Mouse?",
-        choices: ["Warner Bros.", "Universal", "Disney", "Paramount"],
-        correctAnswer: 2,
-        explanation: "Walt Disney created Mickey Mouse, who first appeared in 'Steamboat Willie' (1928)."
-      },
-      {
-        id: 10,
-        question: "What is the name of the fictional country in 'Black Panther'?",
-        choices: ["Zamunda", "Wakanda", "Genovia", "Latveria"],
-        correctAnswer: 1,
-        explanation: "Wakanda is the technologically advanced African nation featured in Marvel's 'Black Panther' (2018)."
-      },
-      {
-        id: 11,
-        question: "Who directed 'Pulp Fiction'?",
-        choices: ["Martin Scorsese", "Quentin Tarantino", "David Fincher", "Guy Ritchie"],
-        correctAnswer: 1,
-        explanation: "Quentin Tarantino wrote and directed 'Pulp Fiction' (1994), winning the Palme d'Or at Cannes."
-      },
-      {
-        id: 12,
-        question: "What was Alfred Hitchcock's first color film?",
-        choices: ["Vertigo", "Rope", "Rear Window", "Psycho"],
-        correctAnswer: 1,
-        explanation: "'Rope' (1948) was Hitchcock's first color film, famous for appearing as one continuous take."
-      },
-      {
-        id: 13,
-        question: "Which film features the quote 'Here's looking at you, kid'?",
-        choices: ["Gone with the Wind", "Casablanca", "The Maltese Falcon", "Citizen Kane"],
-        correctAnswer: 1,
-        explanation: "Humphrey Bogart's iconic line appears multiple times in 'Casablanca' (1942)."
-      },
-      {
-        id: 14,
-        question: "Who composed the music for 'Jaws'?",
-        choices: ["Hans Zimmer", "John Williams", "Ennio Morricone", "Bernard Herrmann"],
-        correctAnswer: 1,
-        explanation: "John Williams created the iconic two-note 'Jaws' theme, winning his second Academy Award."
-      },
-      {
-        id: 15,
-        question: "What is the longest film to win Best Picture at the Oscars?",
-        choices: ["The Godfather Part II", "Gone with the Wind", "Lawrence of Arabia", "Ben-Hur"],
-        correctAnswer: 1,
-        explanation: "'Gone with the Wind' (1939) runs 3 hours 58 minutes, the longest Best Picture winner."
-      },
-      {
-        id: 16,
-        question: "Which country produces the most films annually?",
-        choices: ["United States", "China", "India", "Nigeria"],
-        correctAnswer: 2,
-        explanation: "India's film industry (including Bollywood) produces over 1,500 films annually, more than any other country."
-      },
-      {
-        id: 17,
-        question: "Who directed 'Schindler's List'?",
-        choices: ["Steven Spielberg", "Roman Polanski", "Stanley Kubrick", "Ridley Scott"],
-        correctAnswer: 0,
-        explanation: "Steven Spielberg directed 'Schindler's List' (1993), winning Best Director and Best Picture Oscars."
-      },
-      {
-        id: 18,
-        question: "What film features a character named Tyler Durden?",
-        choices: ["American Psycho", "Fight Club", "Se7en", "The Machinist"],
-        correctAnswer: 1,
-        explanation: "Brad Pitt plays Tyler Durden in David Fincher's 'Fight Club' (1999), based on Chuck Palahniuk's novel."
-      },
-      {
-        id: 19,
-        question: "Which actress starred in 'Breakfast at Tiffany's'?",
-        choices: ["Marilyn Monroe", "Grace Kelly", "Audrey Hepburn", "Elizabeth Taylor"],
-        correctAnswer: 2,
-        explanation: "Audrey Hepburn's portrayal of Holly Golightly in 'Breakfast at Tiffany's' (1961) is one of cinema's most iconic roles."
-      },
-      {
-        id: 20,
-        question: "What is the name of the island in 'Jurassic Park'?",
-        choices: ["Skull Island", "Isla Nublar", "Isla Sorna", "Monster Island"],
-        correctAnswer: 1,
-        explanation: "Isla Nublar is the fictional Costa Rican island where Jurassic Park is located in the 1993 film."
-      },
-      {
-        id: 21,
-        question: "Who played Forrest Gump?",
-        choices: ["Bill Murray", "Tom Hanks", "Robin Williams", "Jim Carrey"],
-        correctAnswer: 1,
-        explanation: "Tom Hanks won his second consecutive Best Actor Oscar for playing Forrest Gump (1994)."
-      },
-      {
-        id: 22,
-        question: "Which film introduced the Wilhelm Scream to popular culture?",
-        choices: ["Distant Drums", "Star Wars", "Indiana Jones", "The Charge at Feather River"],
-        correctAnswer: 3,
-        explanation: "While first used in 'Distant Drums' (1951), 'The Charge at Feather River' (1953) named it after character Private Wilhelm."
-      },
-      {
-        id: 23,
-        question: "What was Stanley Kubrick's last film?",
-        choices: ["Full Metal Jacket", "Eyes Wide Shut", "The Shining", "A Clockwork Orange"],
-        correctAnswer: 1,
-        explanation: "'Eyes Wide Shut' (1999) was Kubrick's final film, completed just days before his death."
-      },
-      {
-        id: 24,
-        question: "Which film features the line 'You can't handle the truth!'?",
-        choices: ["The Firm", "A Few Good Men", "Jerry Maguire", "Top Gun"],
-        correctAnswer: 1,
-        explanation: "Jack Nicholson delivers this famous line in 'A Few Good Men' (1992), directed by Rob Reiner."
-      },
-      {
-        id: 25,
-        question: "What is the Rosebud in 'Citizen Kane'?",
-        choices: ["A painting", "A sled", "A snow globe", "A music box"],
-        correctAnswer: 1,
-        explanation: "Rosebud is Charles Foster Kane's childhood sled, symbolizing lost innocence in Orson Welles' 1941 masterpiece."
-      },
-      {
-        id: 26,
-        question: "Who directed 'Inception'?",
-        choices: ["Denis Villeneuve", "Christopher Nolan", "Ridley Scott", "David Lynch"],
-        correctAnswer: 1,
-        explanation: "Christopher Nolan wrote and directed 'Inception' (2010), exploring dreams within dreams."
-      },
-      {
-        id: 27,
-        question: "Which animated film was the first to be nominated for Best Picture?",
-        choices: ["The Lion King", "Beauty and the Beast", "Up", "Toy Story"],
-        correctAnswer: 1,
-        explanation: "Disney's 'Beauty and the Beast' (1991) was the first animated film nominated for Best Picture."
-      },
-      {
-        id: 28,
-        question: "What year did Netflix release its first original film?",
-        choices: ["2013", "2015", "2017", "2019"],
-        correctAnswer: 1,
-        explanation: "Netflix's first original film was 'Beasts of No Nation' in 2015, directed by Cary Joji Fukunaga."
-      },
-      {
-        id: 29,
-        question: "Who played the lead role in 'The Matrix'?",
-        choices: ["Brad Pitt", "Keanu Reeves", "Nicolas Cage", "Johnny Depp"],
-        correctAnswer: 1,
-        explanation: "Keanu Reeves played Neo in 'The Matrix' (1999), which revolutionized action filmmaking."
-      },
-      {
-        id: 30,
-        question: "Which film won Best Picture at the 2020 Academy Awards?",
-        choices: ["1917", "Joker", "Parasite", "Once Upon a Time in Hollywood"],
-        correctAnswer: 2,
-        explanation: "Bong Joon-ho's 'Parasite' became the first non-English language film to win Best Picture."
-      }
+      { id: 1, question: "In 'Frozen', what is the name of Elsa's sister?", choices: ["Anna", "Ariel", "Aurora", "Alice"], correctAnswer: 0, explanation: "Anna goes on a journey to find her sister Elsa, who has frozen their kingdom of Arendelle!" },
+      { id: 2, question: "What type of fish is Nemo in 'Finding Nemo'?", choices: ["Goldfish", "Clownfish", "Shark", "Angelfish"], correctAnswer: 1, explanation: "Nemo is a clownfish with a lucky fin. His dad Marlin travels across the ocean to find him!" },
+      { id: 3, question: "In 'Toy Story', what is the name of the cowboy?", choices: ["Buzz", "Rex", "Woody", "Slinky"], correctAnswer: 2, explanation: "Woody is Andy's favourite toy until Buzz Lightyear arrives. They become best friends!" },
+      { id: 4, question: "What does 'Hakuna Matata' mean in 'The Lion King'?", choices: ["I love you", "No worries", "Hello friend", "Run away"], correctAnswer: 1, explanation: "Timon and Pumbaa teach Simba that 'Hakuna Matata' means 'no worries for the rest of your days'!" },
+      { id: 5, question: "In 'Shrek', what colour is Shrek?", choices: ["Blue", "Red", "Green", "Purple"], correctAnswer: 2, explanation: "Shrek is a green ogre who lives in a swamp. He goes on an adventure with Donkey to rescue Princess Fiona!" },
+      { id: 6, question: "What is the name of the princess in 'Tangled'?", choices: ["Cinderella", "Rapunzel", "Belle", "Jasmine"], correctAnswer: 1, explanation: "Rapunzel has magical golden hair that's 70 feet long! She's been locked in a tower by Mother Gothel." },
+      { id: 7, question: "In 'Moana', what does Moana want to do?", choices: ["Fly a plane", "Sail the ocean", "Climb a mountain", "Find treasure"], correctAnswer: 1, explanation: "Moana wants to sail beyond the reef to save her island. She's helped by the demigod Maui!" },
+      { id: 8, question: "What kind of creature is Toothless in 'How to Train Your Dragon'?", choices: ["A dinosaur", "A dragon", "A horse", "A griffin"], correctAnswer: 1, explanation: "Toothless is a rare Night Fury dragon who becomes best friends with Hiccup the Viking!" },
+      { id: 9, question: "In 'Despicable Me', what are the little yellow helpers called?", choices: ["Minions", "Helpers", "Yellowlings", "Bloblings"], correctAnswer: 0, explanation: "The Minions speak their own funny language and love bananas! They help Gru with his plans." },
+      { id: 10, question: "What is the name of the rat who wants to be a chef in 'Ratatouille'?", choices: ["Remy", "Emile", "Alfredo", "Gusteau"], correctAnswer: 0, explanation: "Remy the rat has an amazing sense of smell and taste. He controls Linguini by pulling his hair like a puppet!" },
+      { id: 11, question: "In 'The Incredibles', what is the family's surname?", choices: ["Super", "Incredible", "Parr", "Powers"], correctAnswer: 2, explanation: "The Parr family are secretly superheroes! Mr Incredible, Elastigirl, Violet, Dash, and baby Jack-Jack." },
+      { id: 12, question: "What is the magical land called in 'Frozen' and 'Frozen 2'?", choices: ["Narnia", "Arendelle", "Wonderland", "Agrabah"], correctAnswer: 1, explanation: "Arendelle is the kingdom where Elsa and Anna live. Elsa becomes queen and can create ice and snow!" },
+      { id: 13, question: "In 'Paddington', where does Paddington Bear come from?", choices: ["Australia", "Peru", "India", "China"], correctAnswer: 1, explanation: "Paddington comes from 'Darkest Peru' and is found at Paddington Station in London by the Brown family." },
+      { id: 14, question: "What is the name of the blue fish with memory problems in 'Finding Dory'?", choices: ["Dory", "Destiny", "Pearl", "Coral"], correctAnswer: 0, explanation: "Dory is a blue tang fish who has short-term memory loss. She helps Marlin find Nemo and later searches for her own family!" },
+      { id: 15, question: "In 'Kung Fu Panda', what animal is Po?", choices: ["Tiger", "Snake", "Panda", "Monkey"], correctAnswer: 2, explanation: "Po is a clumsy panda who dreams of being a kung fu master. He becomes the Dragon Warrior!" },
+      { id: 16, question: "What does WALL-E stand for in the film?", choices: ["Waste Allocation Load Lifter Earth-class", "World Auto Loader Lifter Electronics", "Waste And Litter Lifting Equipment", "Walking Automated Lifting Loader"], correctAnswer: 0, explanation: "WALL-E is a little robot left on Earth to clean up rubbish. He falls in love with another robot called EVE!" },
+      { id: 17, question: "In 'Encanto', what is special about the Madrigal family?", choices: ["They can fly", "They have magical gifts", "They live underwater", "They can talk to animals"], correctAnswer: 1, explanation: "Each Madrigal family member has a magical gift - except Mirabel, who saves the family's magic!" },
+      { id: 18, question: "What is Lightning McQueen in the 'Cars' films?", choices: ["A truck", "A race car", "A tractor", "A bus"], correctAnswer: 1, explanation: "Lightning McQueen is a red race car. His catchphrase is 'Ka-chow!' and his best friend is Mater the tow truck." },
+      { id: 19, question: "In 'Coco', what instrument does Miguel want to play?", choices: ["Drums", "Piano", "Guitar", "Violin"], correctAnswer: 2, explanation: "Miguel dreams of being a musician like his hero Ernesto de la Cruz. He travels to the Land of the Dead!" },
+      { id: 20, question: "What is the name of the forgetful fish that helps Marlin?", choices: ["Dory", "Gill", "Nemo", "Bruce"], correctAnswer: 0, explanation: "Dory is a blue tang fish who says 'Just keep swimming!' She helps Marlin even though she forgets things quickly." },
+      { id: 21, question: "In 'Luca', what happens when Luca gets wet?", choices: ["He turns invisible", "He turns into a sea monster", "He shrinks", "He glows"], correctAnswer: 1, explanation: "Luca and his friend Alberto are sea monsters who turn into boys when they're dry! It's set in Italy." },
+      { id: 22, question: "What kind of animal is Puss in Boots?", choices: ["A dog", "A cat", "A mouse", "A rabbit"], correctAnswer: 1, explanation: "Puss in Boots is a swashbuckling cat who wears boots, a hat, and carries a tiny sword!" },
+      { id: 23, question: "In 'Inside Out', what colour is the emotion Joy?", choices: ["Red", "Blue", "Yellow", "Green"], correctAnswer: 2, explanation: "Joy is yellow and glowing. She works with Sadness (blue), Anger (red), Fear (purple), and Disgust (green)!" },
+      { id: 24, question: "What is the name of the baby in 'The Boss Baby'?", choices: ["Tim", "Theodore", "Tommy", "Ted"], correctAnswer: 1, explanation: "Theodore is the Boss Baby who wears a tiny suit. He's on a secret mission from Baby Corp!" },
+      { id: 25, question: "In 'Sing', what is Buster Moon?", choices: ["A cat", "A koala", "A pig", "A gorilla"], correctAnswer: 1, explanation: "Buster Moon is a koala who owns a theatre. He holds a singing competition to save it!" },
+      { id: 26, question: "What magical creature does Hiccup befriend in 'How to Train Your Dragon'?", choices: ["A unicorn", "A phoenix", "A dragon", "A griffin"], correctAnswer: 2, explanation: "Hiccup befriends Toothless, a Night Fury dragon. They become best friends and change their world!" },
+      { id: 27, question: "In 'Zootopia', what does Judy Hopps want to be?", choices: ["A doctor", "A police officer", "A singer", "A chef"], correctAnswer: 1, explanation: "Judy is a bunny who dreams of being the first rabbit police officer in Zootopia!" },
+      { id: 28, question: "What is the name of the snowman in 'Frozen'?", choices: ["Olaf", "Sven", "Kristoff", "Hans"], correctAnswer: 0, explanation: "Olaf is a magical snowman created by Elsa. He loves warm hugs and dreams of summer!" },
+      { id: 29, question: "In 'Minions', which villain do the Minions want to serve?", choices: ["Gru", "Scarlet Overkill", "Vector", "Dr Nefario"], correctAnswer: 1, explanation: "The Minions find Scarlet Overkill, the world's first female super-villain, before they meet Gru!" },
+      { id: 30, question: "What ocean creature is Sebastian in 'The Little Mermaid'?", choices: ["A fish", "A seahorse", "A crab", "A starfish"], correctAnswer: 2, explanation: "Sebastian is a crab and Ariel's musical friend. He sings 'Under the Sea' and 'Kiss the Girl'!" }
     ]
   },
   worldGeography: {
     id: 'worldGeography',
     title: 'World Geography',
-    description: 'Explore countries, capitals, and natural wonders.',
+    description: 'Explore countries, capitals, and amazing places!',
     icon: 'globe',
     color: 'green',
     questions: [
-      {
-        id: 1,
-        question: "What is the largest country in the world by land area?",
-        choices: ["Canada", "China", "United States", "Russia"],
-        correctAnswer: 3,
-        explanation: "Russia spans over 17.1 million square kilometers, covering more than 11% of the world's land area."
-      },
-      {
-        id: 2,
-        question: "Which river is the longest in the world?",
-        choices: ["Amazon", "Nile", "Yangtze", "Mississippi"],
-        correctAnswer: 1,
-        explanation: "The Nile River stretches approximately 6,650 km through northeastern Africa."
-      },
-      {
-        id: 3,
-        question: "What is the capital of Australia?",
-        choices: ["Sydney", "Melbourne", "Canberra", "Brisbane"],
-        correctAnswer: 2,
-        explanation: "Canberra is Australia's capital, chosen as a compromise between rivals Sydney and Melbourne in 1908."
-      },
-      {
-        id: 4,
-        question: "Which desert is the largest hot desert in the world?",
-        choices: ["Arabian Desert", "Gobi Desert", "Kalahari Desert", "Sahara Desert"],
-        correctAnswer: 3,
-        explanation: "The Sahara Desert covers about 9.2 million square kilometers across North Africa."
-      },
-      {
-        id: 5,
-        question: "How many countries are in Africa?",
-        choices: ["48", "54", "60", "45"],
-        correctAnswer: 1,
-        explanation: "Africa has 54 recognized sovereign countries, making it the continent with the most nations."
-      },
-      {
-        id: 6,
-        question: "What is the smallest country in the world?",
-        choices: ["Monaco", "San Marino", "Vatican City", "Liechtenstein"],
-        correctAnswer: 2,
-        explanation: "Vatican City covers just 0.44 square kilometers, making it the world's smallest independent state."
-      },
-      {
-        id: 7,
-        question: "Which mountain range contains Mount Everest?",
-        choices: ["Andes", "Alps", "Himalayas", "Rocky Mountains"],
-        correctAnswer: 2,
-        explanation: "Mount Everest (8,849m) is located in the Himalayas, on the border of Nepal and Tibet."
-      },
-      {
-        id: 8,
-        question: "What is the capital of Canada?",
-        choices: ["Toronto", "Vancouver", "Montreal", "Ottawa"],
-        correctAnswer: 3,
-        explanation: "Ottawa, in Ontario, has been Canada's capital since 1857, chosen by Queen Victoria."
-      },
-      {
-        id: 9,
-        question: "Which ocean is the largest?",
-        choices: ["Atlantic Ocean", "Indian Ocean", "Pacific Ocean", "Southern Ocean"],
-        correctAnswer: 2,
-        explanation: "The Pacific Ocean covers about 165.25 million square kilometers, more than all land areas combined."
-      },
-      {
-        id: 10,
-        question: "What is the most populous country in the world?",
-        choices: ["United States", "India", "China", "Indonesia"],
-        correctAnswer: 1,
-        explanation: "India surpassed China in 2023 to become the world's most populous country with over 1.4 billion people."
-      },
-      {
-        id: 11,
-        question: "Which European country has the most UNESCO World Heritage Sites?",
-        choices: ["France", "Spain", "Italy", "Germany"],
-        correctAnswer: 2,
-        explanation: "Italy has the most UNESCO World Heritage Sites of any country, with over 50 locations."
-      },
-      {
-        id: 12,
-        question: "What is the deepest lake in the world?",
-        choices: ["Lake Superior", "Lake Baikal", "Lake Tanganyika", "Caspian Sea"],
-        correctAnswer: 1,
-        explanation: "Lake Baikal in Siberia reaches a depth of 1,642 meters and contains 20% of the world's unfrozen fresh water."
-      },
-      {
-        id: 13,
-        question: "Which country has the longest coastline?",
-        choices: ["Russia", "Indonesia", "Canada", "Australia"],
-        correctAnswer: 2,
-        explanation: "Canada has the world's longest coastline at over 202,080 kilometers, including all islands."
-      },
-      {
-        id: 14,
-        question: "What is the capital of Brazil?",
-        choices: ["São Paulo", "Rio de Janeiro", "Brasília", "Salvador"],
-        correctAnswer: 2,
-        explanation: "Brasília became Brazil's capital in 1960, a planned city designed by architect Oscar Niemeyer."
-      },
-      {
-        id: 15,
-        question: "Which strait separates Europe from Africa?",
-        choices: ["Bering Strait", "Strait of Gibraltar", "Strait of Hormuz", "Bosphorus"],
-        correctAnswer: 1,
-        explanation: "The Strait of Gibraltar is only 14.3 km wide at its narrowest point, connecting the Atlantic to the Mediterranean."
-      },
-      {
-        id: 16,
-        question: "What is the highest waterfall in the world?",
-        choices: ["Niagara Falls", "Victoria Falls", "Angel Falls", "Iguazu Falls"],
-        correctAnswer: 2,
-        explanation: "Angel Falls in Venezuela drops 979 meters, making it the world's highest uninterrupted waterfall."
-      },
-      {
-        id: 17,
-        question: "Which country is known as the 'Land of the Rising Sun'?",
-        choices: ["China", "South Korea", "Japan", "Thailand"],
-        correctAnswer: 2,
-        explanation: "Japan is called 'Nihon' or 'Nippon' in Japanese, meaning 'origin of the sun.'"
-      },
-      {
-        id: 18,
-        question: "What is the largest island in the world?",
-        choices: ["Borneo", "Madagascar", "Greenland", "New Guinea"],
-        correctAnswer: 2,
-        explanation: "Greenland covers about 2.16 million square kilometers. Australia is larger but classified as a continent."
-      },
-      {
-        id: 19,
-        question: "Which river flows through Paris?",
-        choices: ["Rhine", "Danube", "Seine", "Thames"],
-        correctAnswer: 2,
-        explanation: "The Seine River flows through the heart of Paris, with famous bridges like Pont Neuf crossing it."
-      },
-      {
-        id: 20,
-        question: "What is the capital of South Africa?",
-        choices: ["Johannesburg", "Cape Town", "Pretoria", "All three serve as capitals"],
-        correctAnswer: 3,
-        explanation: "South Africa has three capitals: Pretoria (executive), Cape Town (legislative), and Bloemfontein (judicial)."
-      },
-      {
-        id: 21,
-        question: "Which country has the most islands?",
-        choices: ["Indonesia", "Philippines", "Sweden", "Finland"],
-        correctAnswer: 2,
-        explanation: "Sweden has approximately 267,570 islands, though only about 1,000 are inhabited."
-      },
-      {
-        id: 22,
-        question: "What is the driest place on Earth?",
-        choices: ["Sahara Desert", "Death Valley", "Atacama Desert", "Arabian Desert"],
-        correctAnswer: 2,
-        explanation: "The Atacama Desert in Chile is the driest non-polar place on Earth, with some areas having no recorded rainfall."
-      },
-      {
-        id: 23,
-        question: "Which two countries share the longest international border?",
-        choices: ["USA and Mexico", "Russia and China", "USA and Canada", "Argentina and Chile"],
-        correctAnswer: 2,
-        explanation: "The US-Canada border stretches 8,891 km (including Alaska), the world's longest international boundary."
-      },
-      {
-        id: 24,
-        question: "What is the capital of New Zealand?",
-        choices: ["Auckland", "Wellington", "Christchurch", "Hamilton"],
-        correctAnswer: 1,
-        explanation: "Wellington became New Zealand's capital in 1865 due to its central location between the North and South Islands."
-      },
-      {
-        id: 25,
-        question: "Which African country was never colonized?",
-        choices: ["Egypt", "Ethiopia", "Morocco", "Ghana"],
-        correctAnswer: 1,
-        explanation: "Ethiopia (except for a brief Italian occupation 1936-1941) and Liberia are the only African countries never formally colonized."
-      },
-      {
-        id: 26,
-        question: "What is the largest lake in Africa?",
-        choices: ["Lake Tanganyika", "Lake Malawi", "Lake Victoria", "Lake Chad"],
-        correctAnswer: 2,
-        explanation: "Lake Victoria is Africa's largest lake by area at 68,800 square kilometers, shared by Tanzania, Uganda, and Kenya."
-      },
-      {
-        id: 27,
-        question: "Which country is home to Machu Picchu?",
-        choices: ["Bolivia", "Ecuador", "Peru", "Colombia"],
-        correctAnswer: 2,
-        explanation: "Machu Picchu is a 15th-century Incan citadel located in the Andes Mountains of Peru."
-      },
-      {
-        id: 28,
-        question: "What is the only continent without a desert?",
-        choices: ["Europe", "Antarctica", "South America", "None - all have deserts"],
-        correctAnswer: 0,
-        explanation: "Europe is the only continent without a true desert, though it has semi-arid regions in Spain and southeastern areas."
-      },
-      {
-        id: 29,
-        question: "Which country has the most time zones?",
-        choices: ["Russia", "United States", "France", "China"],
-        correctAnswer: 2,
-        explanation: "France has 12 time zones due to its overseas territories, more than any other country including Russia (11)."
-      },
-      {
-        id: 30,
-        question: "What is the capital of Turkey?",
-        choices: ["Istanbul", "Ankara", "Izmir", "Antalya"],
-        correctAnswer: 1,
-        explanation: "Ankara has been Turkey's capital since 1923, though Istanbul remains the largest city and cultural center."
-      }
+      { id: 1, question: "What is the capital city of England?", choices: ["Manchester", "Birmingham", "London", "Liverpool"], correctAnswer: 2, explanation: "London is the capital of England and the United Kingdom. It has Big Ben, Buckingham Palace, and the River Thames!" },
+      { id: 2, question: "How many continents are there in the world?", choices: ["5", "6", "7", "8"], correctAnswer: 2, explanation: "The 7 continents are: Africa, Antarctica, Asia, Australia, Europe, North America, and South America." },
+      { id: 3, question: "Which ocean is the biggest?", choices: ["Atlantic", "Indian", "Pacific", "Arctic"], correctAnswer: 2, explanation: "The Pacific Ocean is the largest and deepest ocean, covering more area than all the land on Earth combined!" },
+      { id: 4, question: "What country is famous for the Eiffel Tower?", choices: ["Italy", "Spain", "France", "Germany"], correctAnswer: 2, explanation: "The Eiffel Tower is in Paris, France. It was built in 1889 and is 330 metres tall!" },
+      { id: 5, question: "Which country has a flag with a maple leaf on it?", choices: ["USA", "Canada", "Australia", "New Zealand"], correctAnswer: 1, explanation: "Canada's flag has a red maple leaf. Canada is famous for maple syrup, ice hockey, and saying 'eh'!" },
+      { id: 6, question: "What is the longest river in the world?", choices: ["Amazon", "Thames", "Nile", "Mississippi"], correctAnswer: 2, explanation: "The River Nile in Africa is about 6,650 kilometres long. It flows through 11 countries!" },
+      { id: 7, question: "Which country is home to kangaroos and koalas?", choices: ["New Zealand", "South Africa", "Australia", "India"], correctAnswer: 2, explanation: "Australia has amazing animals found nowhere else, including kangaroos, koalas, wombats, and platypuses!" },
+      { id: 8, question: "What is the tallest mountain in the world?", choices: ["Ben Nevis", "Mount Everest", "Mont Blanc", "K2"], correctAnswer: 1, explanation: "Mount Everest is 8,849 metres tall and is in the Himalayas between Nepal and Tibet." },
+      { id: 9, question: "How many countries are in the United Kingdom?", choices: ["2", "3", "4", "5"], correctAnswer: 2, explanation: "The UK has 4 countries: England, Scotland, Wales, and Northern Ireland. Each has its own flag!" },
+      { id: 10, question: "What is the capital of Scotland?", choices: ["Glasgow", "Edinburgh", "Aberdeen", "Dundee"], correctAnswer: 1, explanation: "Edinburgh is Scotland's capital. It has a famous castle on a hill and hosts a huge arts festival every August!" },
+      { id: 11, question: "Which country is shaped like a boot?", choices: ["France", "Spain", "Italy", "Greece"], correctAnswer: 2, explanation: "Italy is shaped like a boot kicking a football (Sicily). It's famous for pizza, pasta, and the Leaning Tower of Pisa!" },
+      { id: 12, question: "What is the largest country in the world?", choices: ["China", "USA", "Canada", "Russia"], correctAnswer: 3, explanation: "Russia is so big it spans 11 time zones! It's nearly twice the size of the second largest country, Canada." },
+      { id: 13, question: "Which famous building can you find in India?", choices: ["Eiffel Tower", "Taj Mahal", "Big Ben", "Statue of Liberty"], correctAnswer: 1, explanation: "The Taj Mahal is a beautiful white marble building in India. It was built by an emperor for his wife!" },
+      { id: 14, question: "What is the capital of Wales?", choices: ["Swansea", "Newport", "Cardiff", "Bangor"], correctAnswer: 2, explanation: "Cardiff is the capital of Wales. Wales is famous for its castles, mountains, and the Welsh language!" },
+      { id: 15, question: "On which continent would you find penguins in the wild?", choices: ["Africa", "Europe", "Antarctica", "Asia"], correctAnswer: 2, explanation: "Antarctica is home to millions of penguins! It's the coldest, driest, and windiest continent." },
+      { id: 16, question: "What country is famous for windmills and tulips?", choices: ["Belgium", "Netherlands", "Denmark", "Sweden"], correctAnswer: 1, explanation: "The Netherlands (also called Holland) is famous for windmills, tulips, cheese, and cycling!" },
+      { id: 17, question: "What is the capital of the United States?", choices: ["New York", "Los Angeles", "Washington D.C.", "Chicago"], correctAnswer: 2, explanation: "Washington D.C. is the capital, not New York! D.C. stands for District of Columbia and has the White House." },
+      { id: 18, question: "Which country has the Great Wall?", choices: ["Japan", "China", "Korea", "India"], correctAnswer: 1, explanation: "The Great Wall of China is over 21,000 kilometres long! It was built to protect China from invaders." },
+      { id: 19, question: "What is the smallest country in the world?", choices: ["Monaco", "San Marino", "Vatican City", "Luxembourg"], correctAnswer: 2, explanation: "Vatican City is only 0.44 square kilometres - smaller than most parks! It's where the Pope lives." },
+      { id: 20, question: "Which river flows through London?", choices: ["Seine", "Rhine", "Danube", "Thames"], correctAnswer: 3, explanation: "The River Thames flows through London, past Big Ben and the Tower of London. It's 346 kilometres long!" },
+      { id: 21, question: "What country is famous for the pyramids and the Sphinx?", choices: ["Mexico", "Egypt", "Greece", "Peru"], correctAnswer: 1, explanation: "Egypt's pyramids were built over 4,500 years ago as tombs for pharaohs. The Great Pyramid is the oldest Wonder!" },
+      { id: 22, question: "What is the capital of France?", choices: ["Lyon", "Marseille", "Paris", "Nice"], correctAnswer: 2, explanation: "Paris is the capital of France. It's called the 'City of Light' and has the Eiffel Tower and Louvre Museum!" },
+      { id: 23, question: "Which country invented pizza?", choices: ["USA", "Spain", "France", "Italy"], correctAnswer: 3, explanation: "Pizza was invented in Naples, Italy. The first pizzeria opened in 1830!" },
+      { id: 24, question: "What is the largest desert in the world?", choices: ["Sahara", "Gobi", "Antarctic Desert", "Kalahari"], correctAnswer: 2, explanation: "Surprise! Antarctica is technically the largest desert because it gets very little rain or snow." },
+      { id: 25, question: "Which country is home to the Amazon Rainforest?", choices: ["Australia", "India", "Brazil", "Mexico"], correctAnswer: 2, explanation: "Most of the Amazon is in Brazil. It's the world's largest rainforest and is home to millions of species!" },
+      { id: 26, question: "What is the capital of Germany?", choices: ["Munich", "Frankfurt", "Berlin", "Hamburg"], correctAnswer: 2, explanation: "Berlin is Germany's capital. The Berlin Wall once divided the city into East and West from 1961 to 1989!" },
+      { id: 27, question: "Which continent is the Sahara Desert on?", choices: ["Asia", "Africa", "Australia", "South America"], correctAnswer: 1, explanation: "The Sahara is in Africa and is the largest hot desert. It's almost as big as the USA!" },
+      { id: 28, question: "What country is famous for sushi and Mount Fuji?", choices: ["China", "Korea", "Thailand", "Japan"], correctAnswer: 3, explanation: "Japan is an island nation famous for sushi, anime, and Mount Fuji - a beautiful snow-capped volcano!" },
+      { id: 29, question: "What is the highest mountain in the UK?", choices: ["Snowdon", "Scafell Pike", "Ben Nevis", "Mount Kosciuszko"], correctAnswer: 2, explanation: "Ben Nevis in Scotland is 1,345 metres high. That's the highest point in the British Isles!" },
+      { id: 30, question: "Which city has a famous opera house that looks like sails?", choices: ["New York", "London", "Sydney", "Paris"], correctAnswer: 2, explanation: "The Sydney Opera House in Australia has a unique roof that looks like sailing ships or shells!" }
     ]
   },
   musicHistory: {
     id: 'musicHistory',
-    title: 'Music History',
-    description: 'From classical to rock, test your musical knowledge.',
+    title: 'Music & Songs',
+    description: 'Test your knowledge of music and famous songs!',
     icon: 'music',
     color: 'cyan',
     questions: [
-      {
-        id: 1,
-        question: "Which band released the album 'Abbey Road'?",
-        choices: ["The Rolling Stones", "The Beatles", "The Who", "Led Zeppelin"],
-        correctAnswer: 1,
-        explanation: "'Abbey Road' (1969) was the last album recorded by The Beatles, featuring the iconic crosswalk cover."
-      },
-      {
-        id: 2,
-        question: "Who is known as the 'King of Pop'?",
-        choices: ["Prince", "Elvis Presley", "Michael Jackson", "Stevie Wonder"],
-        correctAnswer: 2,
-        explanation: "Michael Jackson earned the title through his groundbreaking music, videos, and global influence on pop culture."
-      },
-      {
-        id: 3,
-        question: "What instrument did Jimi Hendrix famously play?",
-        choices: ["Bass", "Drums", "Electric guitar", "Keyboard"],
-        correctAnswer: 2,
-        explanation: "Jimi Hendrix is widely considered the greatest electric guitarist ever, known for his innovative playing style."
-      },
-      {
-        id: 4,
-        question: "Which composer wrote 'The Four Seasons'?",
-        choices: ["Bach", "Mozart", "Vivaldi", "Beethoven"],
-        correctAnswer: 2,
-        explanation: "Antonio Vivaldi composed 'The Four Seasons' in 1725, a set of four violin concertos representing each season."
-      },
-      {
-        id: 5,
-        question: "What year did MTV first broadcast?",
-        choices: ["1979", "1981", "1983", "1985"],
-        correctAnswer: 1,
-        explanation: "MTV launched on August 1, 1981, with 'Video Killed the Radio Star' by The Buggles as its first video."
-      },
-      {
-        id: 6,
-        question: "Who wrote the opera 'The Marriage of Figaro'?",
-        choices: ["Verdi", "Puccini", "Mozart", "Wagner"],
-        correctAnswer: 2,
-        explanation: "Wolfgang Amadeus Mozart composed 'The Marriage of Figaro' in 1786, one of the most performed operas."
-      },
-      {
-        id: 7,
-        question: "Which artist had hits with 'Purple Rain' and '1999'?",
-        choices: ["David Bowie", "Prince", "George Michael", "Michael Jackson"],
-        correctAnswer: 1,
-        explanation: "Prince was a musical genius who played multiple instruments and created a unique blend of rock, funk, and R&B."
-      },
-      {
-        id: 8,
-        question: "What is the best-selling album of all time?",
-        choices: ["Back in Black", "The Dark Side of the Moon", "Thriller", "The Bodyguard Soundtrack"],
-        correctAnswer: 2,
-        explanation: "Michael Jackson's 'Thriller' (1982) has sold over 70 million copies worldwide."
-      },
-      {
-        id: 9,
-        question: "Which band was Freddie Mercury the lead singer of?",
-        choices: ["Led Zeppelin", "Queen", "Pink Floyd", "Deep Purple"],
-        correctAnswer: 1,
-        explanation: "Freddie Mercury fronted Queen from 1970 until his death in 1991, known for his powerful voice and showmanship."
-      },
-      {
-        id: 10,
-        question: "What genre originated in the Bronx in the 1970s?",
-        choices: ["Disco", "Punk", "Hip hop", "New wave"],
-        correctAnswer: 2,
-        explanation: "Hip hop emerged from block parties in the Bronx, combining DJing, MCing, breakdancing, and graffiti art."
-      },
-      {
-        id: 11,
-        question: "Who composed 'Symphony No. 9' including 'Ode to Joy'?",
-        choices: ["Bach", "Beethoven", "Brahms", "Handel"],
-        correctAnswer: 1,
-        explanation: "Beethoven completed his Ninth Symphony in 1824, remarkable as he was almost completely deaf by then."
-      },
-      {
-        id: 12,
-        question: "Which singer was known as 'The Queen of Soul'?",
-        choices: ["Diana Ross", "Aretha Franklin", "Whitney Houston", "Tina Turner"],
-        correctAnswer: 1,
-        explanation: "Aretha Franklin's powerful voice and hits like 'Respect' earned her this title and 18 Grammy Awards."
-      },
-      {
-        id: 13,
-        question: "What instrument is Yo-Yo Ma famous for playing?",
-        choices: ["Violin", "Piano", "Cello", "Flute"],
-        correctAnswer: 2,
-        explanation: "Yo-Yo Ma is considered one of the greatest cellists alive, known for his technical skill and diverse repertoire."
-      },
-      {
-        id: 14,
-        question: "Which band performed at the original Woodstock in 1969?",
-        choices: ["Led Zeppelin", "The Doors", "Jimi Hendrix Experience", "Pink Floyd"],
-        correctAnswer: 2,
-        explanation: "Jimi Hendrix closed Woodstock with his legendary performance of 'The Star-Spangled Banner.'"
-      },
-      {
-        id: 15,
-        question: "What was Elvis Presley's first number-one hit?",
-        choices: ["Hound Dog", "Heartbreak Hotel", "Jailhouse Rock", "Love Me Tender"],
-        correctAnswer: 1,
-        explanation: "'Heartbreak Hotel' (1956) was Elvis's first #1 hit and helped establish him as the 'King of Rock and Roll.'"
-      },
-      {
-        id: 16,
-        question: "Which country is the origin of reggae music?",
-        choices: ["Cuba", "Trinidad", "Jamaica", "Haiti"],
-        correctAnswer: 2,
-        explanation: "Reggae developed in Jamaica in the late 1960s, with Bob Marley becoming its most famous ambassador."
-      },
-      {
-        id: 17,
-        question: "Who composed 'The Nutcracker' ballet?",
-        choices: ["Stravinsky", "Tchaikovsky", "Prokofiev", "Rachmaninoff"],
-        correctAnswer: 1,
-        explanation: "Pyotr Ilyich Tchaikovsky composed 'The Nutcracker' in 1892, now a Christmas tradition worldwide."
-      },
-      {
-        id: 18,
-        question: "What was the first music video played on MTV?",
-        choices: ["Thriller", "Video Killed the Radio Star", "Money for Nothing", "Take On Me"],
-        correctAnswer: 1,
-        explanation: "'Video Killed the Radio Star' by The Buggles was MTV's first video, prophetically about technology changing music."
-      },
-      {
-        id: 19,
-        question: "Which rapper founded the record label Death Row Records?",
-        choices: ["Dr. Dre", "Suge Knight", "Snoop Dogg", "Tupac Shakur"],
-        correctAnswer: 1,
-        explanation: "Suge Knight co-founded Death Row Records in 1991, which launched careers of Dr. Dre, Snoop Dogg, and 2Pac."
-      },
-      {
-        id: 20,
-        question: "What instrument does a concertmaster play in an orchestra?",
-        choices: ["Piano", "Cello", "Violin", "Oboe"],
-        correctAnswer: 2,
-        explanation: "The concertmaster is the lead first violinist, sitting to the conductor's left and leading the string section."
-      },
-      {
-        id: 21,
-        question: "Which artist released 'Lemonade' in 2016?",
-        choices: ["Rihanna", "Beyoncé", "Adele", "Taylor Swift"],
-        correctAnswer: 1,
-        explanation: "Beyoncé's visual album 'Lemonade' addressed themes of infidelity, Black womanhood, and empowerment."
-      },
-      {
-        id: 22,
-        question: "What was Nirvana's breakthrough album?",
-        choices: ["Bleach", "Nevermind", "In Utero", "MTV Unplugged in New York"],
-        correctAnswer: 1,
-        explanation: "'Nevermind' (1991) featuring 'Smells Like Teen Spirit' brought grunge into the mainstream."
-      },
-      {
-        id: 23,
-        question: "Who is known as the 'Godfather of Soul'?",
-        choices: ["Ray Charles", "James Brown", "Marvin Gaye", "Sam Cooke"],
-        correctAnswer: 1,
-        explanation: "James Brown earned this title through his energetic performances and influence on funk, soul, and R&B."
-      },
-      {
-        id: 24,
-        question: "Which classical period came before the Romantic era?",
-        choices: ["Baroque", "Classical", "Renaissance", "Medieval"],
-        correctAnswer: 1,
-        explanation: "The Classical period (1750-1820) preceded the Romantic era, featuring Mozart, Haydn, and early Beethoven."
-      },
-      {
-        id: 25,
-        question: "What band did Kurt Cobain front?",
-        choices: ["Pearl Jam", "Soundgarden", "Nirvana", "Alice in Chains"],
-        correctAnswer: 2,
-        explanation: "Kurt Cobain was the frontman of Nirvana until his death in 1994, defining the grunge movement."
-      },
-      {
-        id: 26,
-        question: "Which artist has won the most Grammy Awards?",
-        choices: ["Quincy Jones", "Beyoncé", "Georg Solti", "Stevie Wonder"],
-        correctAnswer: 1,
-        explanation: "Beyoncé holds the record with 32 Grammy wins as of 2023, surpassing the previous record held by Georg Solti."
-      },
-      {
-        id: 27,
-        question: "What year was the first Grammy Awards ceremony held?",
-        choices: ["1955", "1959", "1963", "1967"],
-        correctAnswer: 1,
-        explanation: "The first Grammy Awards ceremony was held on May 4, 1959, honoring recordings from 1958."
-      },
-      {
-        id: 28,
-        question: "Which composer went deaf but continued to compose?",
-        choices: ["Mozart", "Bach", "Beethoven", "Chopin"],
-        correctAnswer: 2,
-        explanation: "Beethoven began losing his hearing in his late 20s but composed some of his greatest works while deaf."
-      },
-      {
-        id: 29,
-        question: "What is the name of Taylor Swift's re-recorded album series?",
-        choices: ["Taylor's Cut", "Taylor's Version", "Swift Sessions", "Original Taylor"],
-        correctAnswer: 1,
-        explanation: "Swift began re-recording albums as 'Taylor's Version' in 2021 to own her master recordings."
-      },
-      {
-        id: 30,
-        question: "Which British band is known for 'Bohemian Rhapsody'?",
-        choices: ["The Who", "Queen", "Led Zeppelin", "Pink Floyd"],
-        correctAnswer: 1,
-        explanation: "Queen's 'Bohemian Rhapsody' (1975) is a six-minute operatic rock epic written by Freddie Mercury."
-      }
+      { id: 1, question: "How many strings does a standard guitar have?", choices: ["4", "5", "6", "8"], correctAnswer: 2, explanation: "A standard guitar has 6 strings. Bass guitars have 4 strings and 12-string guitars exist too!" },
+      { id: 2, question: "What instrument has black and white keys?", choices: ["Guitar", "Drums", "Piano", "Violin"], correctAnswer: 2, explanation: "A piano has 88 keys - 52 white keys and 36 black keys. You play it by pressing the keys!" },
+      { id: 3, question: "Which band sang 'Yellow Submarine'?", choices: ["The Rolling Stones", "The Beatles", "Queen", "ABBA"], correctAnswer: 1, explanation: "The Beatles sang 'Yellow Submarine' - 'We all live in a yellow submarine!' They're from Liverpool!" },
+      { id: 4, question: "What do you call a group of singers performing together?", choices: ["An orchestra", "A band", "A choir", "A duo"], correctAnswer: 2, explanation: "A choir is a group of people singing together, often in churches, schools, or at concerts!" },
+      { id: 5, question: "What instrument does a drummer play?", choices: ["Strings", "Drums", "Keys", "Brass"], correctAnswer: 1, explanation: "Drummers play a drum kit which includes bass drum, snare drum, cymbals, and tom-toms!" },
+      { id: 6, question: "Who sang 'Let It Go' from Frozen?", choices: ["Elsa", "Idina Menzel", "Anna", "Both Elsa and Idina Menzel"], correctAnswer: 3, explanation: "Idina Menzel is the voice of Elsa and sings 'Let It Go'. The song won an Oscar!" },
+      { id: 7, question: "How many musicians play in a duet?", choices: ["1", "2", "3", "4"], correctAnswer: 1, explanation: "A duet has 2 musicians or singers. A trio has 3, and a quartet has 4!" },
+      { id: 8, question: "What shape is a triangle instrument?", choices: ["Round", "Square", "Triangle", "Rectangle"], correctAnswer: 2, explanation: "The triangle is a simple metal instrument shaped like a triangle. You hit it with a small metal beater!" },
+      { id: 9, question: "What do you call the stick used to conduct an orchestra?", choices: ["A wand", "A baton", "A rod", "A pointer"], correctAnswer: 1, explanation: "A conductor uses a baton to direct the orchestra, showing them when and how to play!" },
+      { id: 10, question: "Which instrument do you blow into to make music?", choices: ["Violin", "Flute", "Guitar", "Drum"], correctAnswer: 1, explanation: "The flute is a woodwind instrument you blow across to make sound. Recorders work the same way!" },
+      { id: 11, question: "What is the name of the famous British song 'Happy Birthday to...'?", choices: ["You", "Me", "Us", "Them"], correctAnswer: 0, explanation: "'Happy Birthday to You' is one of the most sung songs in the world. It was written in 1893!" },
+      { id: 12, question: "What do the letters 'DJ' stand for?", choices: ["Dance Jockey", "Disc Jockey", "Digital Jockey", "Drum Jockey"], correctAnswer: 1, explanation: "DJ stands for Disc Jockey - someone who plays recorded music for an audience!" },
+      { id: 13, question: "How many lines are on a music staff?", choices: ["3", "4", "5", "6"], correctAnswer: 2, explanation: "A music staff has 5 lines. Musical notes sit on or between these lines to show which pitch to play!" },
+      { id: 14, question: "What instrument is known as the 'King of Instruments'?", choices: ["Piano", "Organ", "Violin", "Harp"], correctAnswer: 1, explanation: "The pipe organ is called the 'King of Instruments' because of its size and range. Some have thousands of pipes!" },
+      { id: 15, question: "Which singer is known for songs like 'Shake It Off'?", choices: ["Ariana Grande", "Taylor Swift", "Beyoncé", "Katy Perry"], correctAnswer: 1, explanation: "Taylor Swift wrote 'Shake It Off'. She started as a country singer and is now one of the biggest pop stars!" },
+      { id: 16, question: "What do you shake to make a rhythm?", choices: ["A violin", "A maracas", "A trumpet", "A harp"], correctAnswer: 1, explanation: "Maracas are filled with beads or seeds. You shake them to create a rattling rhythm!" },
+      { id: 17, question: "What is the lowest adult male singing voice called?", choices: ["Soprano", "Alto", "Tenor", "Bass"], correctAnswer: 3, explanation: "Bass is the lowest voice. From high to low: soprano, alto, tenor, bass (but kids sing higher!)." },
+      { id: 18, question: "Which instrument has pedals and strings and looks like an angel might play it?", choices: ["Guitar", "Piano", "Harp", "Violin"], correctAnswer: 2, explanation: "The harp has 47 strings and 7 pedals. Harps appear in pictures of angels and are thousands of years old!" },
+      { id: 19, question: "What is a song without instruments called?", choices: ["A cappella", "Solo", "Instrumental", "Unplugged"], correctAnswer: 0, explanation: "A cappella means singing without any instruments - just voices! Many choirs sing a cappella." },
+      { id: 20, question: "What do you call the words of a song?", choices: ["Music", "Notes", "Lyrics", "Melody"], correctAnswer: 2, explanation: "Lyrics are the words to a song. The melody is the tune, and together they make a song!" },
+      { id: 21, question: "Which instrument looks like a large violin and you play sitting down?", choices: ["Viola", "Cello", "Double bass", "Harp"], correctAnswer: 1, explanation: "A cello is played sitting down with the instrument between your knees. It has a deep, beautiful sound!" },
+      { id: 22, question: "What famous music festival takes place in Glastonbury, England?", choices: ["Glastonbury Festival", "Reading Festival", "Leeds Festival", "V Festival"], correctAnswer: 0, explanation: "Glastonbury Festival is one of the world's biggest music festivals, held on a farm in Somerset every summer!" },
+      { id: 23, question: "What do you call the speed of music?", choices: ["Volume", "Pitch", "Tempo", "Rhythm"], correctAnswer: 2, explanation: "Tempo is how fast or slow music is played. Fast tempo makes you want to dance!" },
+      { id: 24, question: "Which brass instrument is long and slides?", choices: ["Trumpet", "Tuba", "Trombone", "French horn"], correctAnswer: 2, explanation: "The trombone has a slide that you push in and out to change notes. It's used in orchestras and jazz bands!" },
+      { id: 25, question: "What song is traditionally sung on New Year's Eve in the UK?", choices: ["Happy Birthday", "We Wish You a Merry Christmas", "Auld Lang Syne", "God Save the King"], correctAnswer: 2, explanation: "'Auld Lang Syne' is sung at midnight on New Year's Eve. It's an old Scottish song about remembering friends!" },
+      { id: 26, question: "What is the national anthem of the United Kingdom called?", choices: ["Rule Britannia", "God Save the King", "Land of Hope and Glory", "Jerusalem"], correctAnswer: 1, explanation: "'God Save the King' is the UK national anthem. It changes to 'Queen' when there's a reigning queen!" },
+      { id: 27, question: "How many notes are in an octave?", choices: ["6", "7", "8", "10"], correctAnswer: 2, explanation: "An octave has 8 notes: do-re-mi-fa-so-la-ti-do. The word 'octave' comes from Latin for 'eight'!" },
+      { id: 28, question: "What instrument makes sound when you hit the keys and hammers hit strings inside?", choices: ["Guitar", "Piano", "Organ", "Harpsichord"], correctAnswer: 1, explanation: "When you press a piano key, a hammer inside hits strings to make the sound. That's why pianos are also called 'percussion' instruments!" },
+      { id: 29, question: "What do you read to know which notes to play?", choices: ["A book", "Sheet music", "A magazine", "A letter"], correctAnswer: 1, explanation: "Sheet music shows you which notes to play and when. It uses special symbols on lines called a staff!" },
+      { id: 30, question: "Which music style comes from Jamaica and has a relaxed beat?", choices: ["Rock", "Jazz", "Reggae", "Classical"], correctAnswer: 2, explanation: "Reggae comes from Jamaica. Bob Marley was a famous reggae musician who sang 'One Love' and 'Three Little Birds'!" }
     ]
   }
 }

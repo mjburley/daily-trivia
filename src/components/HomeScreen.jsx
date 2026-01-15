@@ -15,6 +15,14 @@ function HomeScreen({ onSelectCategory }) {
       icon: 'maths',
       color: 'blue',
       count: '5 Topics'
+    },
+    {
+      id: 'french',
+      title: 'French',
+      description: 'Learn French words and phrases',
+      icon: 'french',
+      color: 'pink',
+      count: '5 Topics'
     }
   ]
 
@@ -30,6 +38,12 @@ function HomeScreen({ onSelectCategory }) {
         return (
           <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+          </svg>
+        )
+      case 'french':
+        return (
+          <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
           </svg>
         )
       default:
@@ -54,6 +68,14 @@ function HomeScreen({ onSelectCategory }) {
           shadow: 'hover:shadow-glow-blue',
           text: 'text-cyber-blue-light',
           bg: 'bg-cyber-blue/10'
+        }
+      case 'pink':
+        return {
+          gradient: 'from-cyber-pink to-rose-400',
+          border: 'border-cyber-pink/30 hover:border-cyber-pink',
+          shadow: 'hover:shadow-glow-pink',
+          text: 'text-cyber-pink',
+          bg: 'bg-cyber-pink/10'
         }
       default:
         return {
