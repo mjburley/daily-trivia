@@ -111,10 +111,10 @@ function SplashScreen({ onStartQuiz, quizzes }) {
               {/* Question count badge */}
               <div className="mt-3 flex gap-2">
                 <span className={`px-3 py-1 rounded-full ${colors.bg} ${colors.text} text-xs font-medium`}>
-                  {quiz.questions.length} Questions
+                  {quiz.questions.length} Question Pool
                 </span>
                 <span className="px-3 py-1 rounded-full bg-gray-800/50 text-gray-400 text-xs font-medium">
-                  Quick Play
+                  5 Random Each Game
                 </span>
               </div>
             </button>

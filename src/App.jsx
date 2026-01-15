@@ -11,21 +11,43 @@ const QUIZ_STATE = {
   FINISHED: 'finished'
 }
 
+// Number of questions per game
+const QUESTIONS_PER_GAME = 5
+
+// Fisher-Yates shuffle algorithm
+function shuffleArray(array) {
+  const shuffled = [...array]
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+  }
+  return shuffled
+}
+
+// Get random questions from pool
+function getRandomQuestions(questionPool, count) {
+  const shuffled = shuffleArray(questionPool)
+  return shuffled.slice(0, count)
+}
+
 function App() {
   // Quiz engine state
   const [gameState, setGameState] = useState(QUIZ_STATE.SPLASH)
   const [selectedQuiz, setSelectedQuiz] = useState(null)
+  const [questions, setQuestions] = useState([])
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [score, setScore] = useState(0)
   const [selectedAnswer, setSelectedAnswer] = useState(null)
   const [isAnswerRevealed, setIsAnswerRevealed] = useState(false)
 
-  // Get current questions based on selected quiz
-  const questions = selectedQuiz ? quizzes[selectedQuiz].questions : []
-
   // Start the quiz with a specific quiz type
   const handleStartQuiz = useCallback((quizId) => {
+    // Get random 5 questions from the quiz pool
+    const questionPool = quizzes[quizId].questions
+    const randomQuestions = getRandomQuestions(questionPool, QUESTIONS_PER_GAME)
+
     setSelectedQuiz(quizId)
+    setQuestions(randomQuestions)
     setGameState(QUIZ_STATE.PLAYING)
     setCurrentQuestionIndex(0)
     setScore(0)
@@ -61,6 +83,7 @@ function App() {
   const handlePlayAgain = useCallback(() => {
     setGameState(QUIZ_STATE.SPLASH)
     setSelectedQuiz(null)
+    setQuestions([])
     setCurrentQuestionIndex(0)
     setScore(0)
     setSelectedAnswer(null)
@@ -85,7 +108,7 @@ function App() {
           <SplashScreen onStartQuiz={handleStartQuiz} quizzes={quizzes} />
         )}
 
-        {gameState === QUIZ_STATE.PLAYING && (
+        {gameState === QUIZ_STATE.PLAYING && questions.length > 0 && (
           <QuizCard
             question={questions[currentQuestionIndex]}
             questionNumber={currentQuestionIndex + 1}
