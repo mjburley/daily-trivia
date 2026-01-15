@@ -2,7 +2,7 @@ import { useState, useCallback } from 'react'
 import SplashScreen from './components/SplashScreen'
 import QuizCard from './components/QuizCard'
 import ResultsScreen from './components/ResultsScreen'
-import { questions } from './data/questions'
+import { quizzes } from './data/questions'
 
 // Quiz states
 const QUIZ_STATE = {
@@ -14,13 +14,18 @@ const QUIZ_STATE = {
 function App() {
   // Quiz engine state
   const [gameState, setGameState] = useState(QUIZ_STATE.SPLASH)
+  const [selectedQuiz, setSelectedQuiz] = useState(null)
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [score, setScore] = useState(0)
   const [selectedAnswer, setSelectedAnswer] = useState(null)
   const [isAnswerRevealed, setIsAnswerRevealed] = useState(false)
 
-  // Start the quiz
-  const handleStartQuiz = useCallback(() => {
+  // Get current questions based on selected quiz
+  const questions = selectedQuiz ? quizzes[selectedQuiz].questions : []
+
+  // Start the quiz with a specific quiz type
+  const handleStartQuiz = useCallback((quizId) => {
+    setSelectedQuiz(quizId)
     setGameState(QUIZ_STATE.PLAYING)
     setCurrentQuestionIndex(0)
     setScore(0)
@@ -39,7 +44,7 @@ function App() {
     if (answerIndex === currentQuestion.correctAnswer) {
       setScore(prev => prev + 1)
     }
-  }, [currentQuestionIndex, isAnswerRevealed])
+  }, [currentQuestionIndex, isAnswerRevealed, questions])
 
   // Move to next question
   const handleNextQuestion = useCallback(() => {
@@ -50,12 +55,17 @@ function App() {
     } else {
       setGameState(QUIZ_STATE.FINISHED)
     }
-  }, [currentQuestionIndex])
+  }, [currentQuestionIndex, questions.length])
 
-  // Play again
+  // Play again - go back to splash to choose quiz
   const handlePlayAgain = useCallback(() => {
-    handleStartQuiz()
-  }, [handleStartQuiz])
+    setGameState(QUIZ_STATE.SPLASH)
+    setSelectedQuiz(null)
+    setCurrentQuestionIndex(0)
+    setScore(0)
+    setSelectedAnswer(null)
+    setIsAnswerRevealed(false)
+  }, [])
 
   return (
     <div className="min-h-screen bg-cyber-darker flex items-center justify-center p-4 overflow-hidden">
@@ -72,7 +82,7 @@ function App() {
       {/* Main content */}
       <main className="relative z-10 w-full max-w-lg">
         {gameState === QUIZ_STATE.SPLASH && (
-          <SplashScreen onStart={handleStartQuiz} />
+          <SplashScreen onStartQuiz={handleStartQuiz} quizzes={quizzes} />
         )}
 
         {gameState === QUIZ_STATE.PLAYING && (
@@ -84,6 +94,7 @@ function App() {
             isAnswerRevealed={isAnswerRevealed}
             onAnswerSelect={handleAnswerSelect}
             onNextQuestion={handleNextQuestion}
+            quizTitle={quizzes[selectedQuiz]?.title}
           />
         )}
 
@@ -92,6 +103,7 @@ function App() {
             score={score}
             totalQuestions={questions.length}
             onPlayAgain={handlePlayAgain}
+            quizTitle={quizzes[selectedQuiz]?.title}
           />
         )}
       </main>
