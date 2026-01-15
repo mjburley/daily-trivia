@@ -15,6 +15,24 @@ function SplashScreen({ onStartQuiz, quizzes }) {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
           </svg>
         )
+      case 'film':
+        return (
+          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
+          </svg>
+        )
+      case 'globe':
+        return (
+          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        )
+      case 'music':
+        return (
+          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+          </svg>
+        )
       default:
         return (
           <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -41,6 +59,30 @@ function SplashScreen({ onStartQuiz, quizzes }) {
           shadow: 'hover:shadow-glow-blue',
           text: 'text-cyber-blue-light',
           bg: 'bg-cyber-blue/10'
+        }
+      case 'pink':
+        return {
+          gradient: 'from-cyber-pink to-rose-400',
+          border: 'border-cyber-pink/30 hover:border-cyber-pink',
+          shadow: 'hover:shadow-glow-pink',
+          text: 'text-cyber-pink',
+          bg: 'bg-cyber-pink/10'
+        }
+      case 'green':
+        return {
+          gradient: 'from-emerald-500 to-green-400',
+          border: 'border-emerald-500/30 hover:border-emerald-500',
+          shadow: 'hover:shadow-[0_0_20px_rgba(16,185,129,0.5)]',
+          text: 'text-emerald-400',
+          bg: 'bg-emerald-500/10'
+        }
+      case 'cyan':
+        return {
+          gradient: 'from-cyber-cyan to-teal-400',
+          border: 'border-cyber-cyan/30 hover:border-cyber-cyan',
+          shadow: 'hover:shadow-glow-cyan',
+          text: 'text-cyber-cyan',
+          bg: 'bg-cyber-cyan/10'
         }
       default:
         return {

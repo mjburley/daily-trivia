@@ -117,6 +117,7 @@ function App() {
             isAnswerRevealed={isAnswerRevealed}
             onAnswerSelect={handleAnswerSelect}
             onNextQuestion={handleNextQuestion}
+            onGoHome={handlePlayAgain}
             quizTitle={quizzes[selectedQuiz]?.title}
           />
         )}
