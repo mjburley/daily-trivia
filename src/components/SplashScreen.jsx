@@ -1,4 +1,4 @@
-function SplashScreen({ onStartQuiz, quizzes }) {
+function SplashScreen({ onStartQuiz, quizzes, onGoHome, categoryTitle }) {
   const quizList = Object.values(quizzes)
 
   const getIcon = (iconType) => {
@@ -31,6 +31,36 @@ function SplashScreen({ onStartQuiz, quizzes }) {
         return (
           <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+          </svg>
+        )
+      case 'plus':
+        return (
+          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+          </svg>
+        )
+      case 'times':
+        return (
+          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        )
+      case 'divide':
+        return (
+          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v.01M12 16v.01M5 12h14" />
+          </svg>
+        )
+      case 'fraction':
+        return (
+          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h.01M17 17h.01M5 19L19 5" />
+          </svg>
+        )
+      case 'puzzle':
+        return (
+          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
           </svg>
         )
       default:
@@ -97,6 +127,16 @@ function SplashScreen({ onStartQuiz, quizzes }) {
 
   return (
     <div className="animate-fade-in text-center">
+      {/* Home Button */}
+      <button
+        onClick={onGoHome}
+        className="absolute top-4 left-4 p-2 rounded-lg bg-cyber-dark/50 border border-gray-700 hover:border-cyber-purple hover:shadow-glow-purple transition-all duration-300 group"
+      >
+        <svg className="w-6 h-6 text-gray-400 group-hover:text-cyber-purple-light transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+        </svg>
+      </button>
+
       {/* Logo/Icon */}
       <div className="mb-8">
         <div className="inline-flex items-center justify-center w-24 h-24 rounded-2xl bg-gradient-to-br from-cyber-purple to-cyber-blue shadow-glow-purple animate-pulse-glow">
@@ -108,7 +148,7 @@ function SplashScreen({ onStartQuiz, quizzes }) {
 
       {/* Title */}
       <h1 className="font-cyber text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyber-purple-light via-cyber-pink to-cyber-blue-light bg-clip-text text-transparent">
-        DAILY TRIVIA
+        {categoryTitle || 'DAILY TRIVIA'}
       </h1>
 
       {/* Subtitle */}

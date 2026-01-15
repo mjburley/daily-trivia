@@ -1,12 +1,15 @@
 import { useState, useCallback } from 'react'
+import HomeScreen from './components/HomeScreen'
 import SplashScreen from './components/SplashScreen'
 import QuizCard from './components/QuizCard'
 import ResultsScreen from './components/ResultsScreen'
 import { quizzes } from './data/questions'
+import { mathsQuizzes } from './data/mathsQuestions'
 
-// Quiz states
-const QUIZ_STATE = {
-  SPLASH: 'splash',
+// App states
+const APP_STATE = {
+  HOME: 'home',
+  CATEGORY: 'category',
   PLAYING: 'playing',
   FINISHED: 'finished'
 }
@@ -31,8 +34,9 @@ function getRandomQuestions(questionPool, count) {
 }
 
 function App() {
-  // Quiz engine state
-  const [gameState, setGameState] = useState(QUIZ_STATE.SPLASH)
+  // App state
+  const [appState, setAppState] = useState(APP_STATE.HOME)
+  const [selectedCategory, setSelectedCategory] = useState(null)
   const [selectedQuiz, setSelectedQuiz] = useState(null)
   const [questions, setQuestions] = useState([])
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
@@ -40,20 +44,33 @@ function App() {
   const [selectedAnswer, setSelectedAnswer] = useState(null)
   const [isAnswerRevealed, setIsAnswerRevealed] = useState(false)
 
+  // Get the appropriate quiz data based on category
+  const getQuizData = useCallback(() => {
+    if (selectedCategory === 'trivia') return quizzes
+    if (selectedCategory === 'maths') return mathsQuizzes
+    return {}
+  }, [selectedCategory])
+
+  // Handle category selection from home screen
+  const handleSelectCategory = useCallback((categoryId) => {
+    setSelectedCategory(categoryId)
+    setAppState(APP_STATE.CATEGORY)
+  }, [])
+
   // Start the quiz with a specific quiz type
   const handleStartQuiz = useCallback((quizId) => {
-    // Get random 5 questions from the quiz pool
-    const questionPool = quizzes[quizId].questions
+    const quizData = selectedCategory === 'trivia' ? quizzes : mathsQuizzes
+    const questionPool = quizData[quizId].questions
     const randomQuestions = getRandomQuestions(questionPool, QUESTIONS_PER_GAME)
 
     setSelectedQuiz(quizId)
     setQuestions(randomQuestions)
-    setGameState(QUIZ_STATE.PLAYING)
+    setAppState(APP_STATE.PLAYING)
     setCurrentQuestionIndex(0)
     setScore(0)
     setSelectedAnswer(null)
     setIsAnswerRevealed(false)
-  }, [])
+  }, [selectedCategory])
 
   // Handle answer selection
   const handleAnswerSelect = useCallback((answerIndex) => {
@@ -75,13 +92,14 @@ function App() {
       setSelectedAnswer(null)
       setIsAnswerRevealed(false)
     } else {
-      setGameState(QUIZ_STATE.FINISHED)
+      setAppState(APP_STATE.FINISHED)
     }
   }, [currentQuestionIndex, questions.length])
 
-  // Play again - go back to splash to choose quiz
-  const handlePlayAgain = useCallback(() => {
-    setGameState(QUIZ_STATE.SPLASH)
+  // Go back to home
+  const handleGoHome = useCallback(() => {
+    setAppState(APP_STATE.HOME)
+    setSelectedCategory(null)
     setSelectedQuiz(null)
     setQuestions([])
     setCurrentQuestionIndex(0)
@@ -89,6 +107,23 @@ function App() {
     setSelectedAnswer(null)
     setIsAnswerRevealed(false)
   }, [])
+
+  // Go back to category selection
+  const handleGoToCategory = useCallback(() => {
+    setAppState(APP_STATE.CATEGORY)
+    setSelectedQuiz(null)
+    setQuestions([])
+    setCurrentQuestionIndex(0)
+    setScore(0)
+    setSelectedAnswer(null)
+    setIsAnswerRevealed(false)
+  }, [])
+
+  // Get current quiz title
+  const getCurrentQuizTitle = () => {
+    const quizData = getQuizData()
+    return quizData[selectedQuiz]?.title || ''
+  }
 
   return (
     <div className="min-h-screen bg-cyber-darker flex items-center justify-center p-4 overflow-hidden">
@@ -104,11 +139,20 @@ function App() {
 
       {/* Main content */}
       <main className="relative z-10 w-full max-w-lg">
-        {gameState === QUIZ_STATE.SPLASH && (
-          <SplashScreen onStartQuiz={handleStartQuiz} quizzes={quizzes} />
+        {appState === APP_STATE.HOME && (
+          <HomeScreen onSelectCategory={handleSelectCategory} />
         )}
 
-        {gameState === QUIZ_STATE.PLAYING && questions.length > 0 && (
+        {appState === APP_STATE.CATEGORY && (
+          <SplashScreen
+            onStartQuiz={handleStartQuiz}
+            quizzes={getQuizData()}
+            onGoHome={handleGoHome}
+            categoryTitle={selectedCategory === 'trivia' ? 'Quiz' : 'Maths Problems'}
+          />
+        )}
+
+        {appState === APP_STATE.PLAYING && questions.length > 0 && (
           <QuizCard
             question={questions[currentQuestionIndex]}
             questionNumber={currentQuestionIndex + 1}
@@ -117,17 +161,18 @@ function App() {
             isAnswerRevealed={isAnswerRevealed}
             onAnswerSelect={handleAnswerSelect}
             onNextQuestion={handleNextQuestion}
-            onGoHome={handlePlayAgain}
-            quizTitle={quizzes[selectedQuiz]?.title}
+            onGoHome={handleGoHome}
+            quizTitle={getCurrentQuizTitle()}
           />
         )}
 
-        {gameState === QUIZ_STATE.FINISHED && (
+        {appState === APP_STATE.FINISHED && (
           <ResultsScreen
             score={score}
             totalQuestions={questions.length}
-            onPlayAgain={handlePlayAgain}
-            quizTitle={quizzes[selectedQuiz]?.title}
+            onPlayAgain={handleGoToCategory}
+            onGoHome={handleGoHome}
+            quizTitle={getCurrentQuizTitle()}
           />
         )}
       </main>
