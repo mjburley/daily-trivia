@@ -1,12 +1,12 @@
-# Quiz App Framework Reference
+# React + Vite + Tailwind Framework Reference
 
-This document describes the framework and patterns used in this React quiz application, for use as a template in future projects.
+This document describes the framework and patterns for building React applications with Vite and Tailwind CSS, deployed to Vercel.
 
 ## Technology Stack
 
 - **React 18** with JSX
-- **Vite** - Build tool and dev server
-- **Tailwind CSS** - Utility-first CSS with custom cyberpunk theme
+- **Vite** - Fast build tool and dev server
+- **Tailwind CSS** - Utility-first CSS framework
 - **PostCSS** - CSS processing
 
 ## Project Structure
@@ -16,241 +16,269 @@ project-root/
 ├── index.html              # Entry HTML file
 ├── package.json            # Dependencies and scripts
 ├── vite.config.js          # Vite configuration
-├── tailwind.config.js      # Tailwind + custom theme colours
+├── tailwind.config.js      # Tailwind configuration + custom theme
 ├── postcss.config.js       # PostCSS configuration
 ├── public/
 │   └── favicon.svg         # App icon
 └── src/
     ├── main.jsx            # React entry point
     ├── index.css           # Global styles + Tailwind imports
-    ├── App.jsx             # Main app component with state management
-    ├── components/
-    │   ├── HomeScreen.jsx      # Category selection screen
-    │   ├── SplashScreen.jsx    # Quiz topic selection within category
-    │   ├── QuizCard.jsx        # Question display and answer selection
-    │   └── ResultsScreen.jsx   # Score display at end of quiz
-    └── data/
-        ├── questions.js        # Trivia quiz data
-        ├── mathsQuestions.js   # Maths quiz data
-        └── frenchQuestions.js  # French quiz data
+    ├── App.jsx             # Main app component
+    ├── components/         # React components
+    │   └── ComponentName.jsx
+    └── data/               # Static data files
+        └── dataFile.js
 ```
 
-## App State Flow
+## Configuration Files
 
-```
-HOME → CATEGORY → PLAYING → FINISHED
-  ↑_______|_________|_________|
-         (back/home buttons)
-```
-
-### State Variables (App.jsx)
-
-```javascript
-const [appState, setAppState] = useState(APP_STATE.HOME)      // Current screen
-const [selectedCategory, setSelectedCategory] = useState(null) // e.g. 'trivia', 'maths', 'french'
-const [selectedQuiz, setSelectedQuiz] = useState(null)         // e.g. 'spaceTech', 'addition'
-const [questions, setQuestions] = useState([])                 // Current game's 5 random questions
-const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
-const [score, setScore] = useState(0)
-const [selectedAnswer, setSelectedAnswer] = useState(null)
-const [isAnswerRevealed, setIsAnswerRevealed] = useState(false)
-```
-
-## Data Structure
-
-### Category Data File Format
-
-Each category has its own data file exporting a quizzes object:
-
-```javascript
-export const categoryQuizzes = {
-  topicId: {
-    id: 'topicId',
-    title: 'Topic Title',
-    description: 'Short description of the topic',
-    icon: 'iconName',      // See icon list below
-    color: 'colorName',    // purple, blue, pink, green, cyan
-    questions: [
-      {
-        id: 1,
-        question: "Question text?",
-        choices: ["Option A", "Option B", "Option C", "Option D"],
-        correctAnswer: 0,  // Index of correct choice (0-3)
-        explanation: "Explanation shown after answering."
-      },
-      // ... 30 questions per topic
-    ]
+### package.json
+```json
+{
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  // ... more topics
-}
-```
-
-### Adding a New Category
-
-1. Create data file: `src/data/newCategoryQuestions.js`
-2. Import in `App.jsx`: `import { newQuizzes } from './data/newCategoryQuestions'`
-3. Update `getQuizData()` function to return data for new category
-4. Update `handleStartQuiz()` to handle new category
-5. Update `categoryTitle` in SplashScreen props
-6. Add category to `HomeScreen.jsx` categories array
-7. Add new icon to `HomeScreen.jsx` getIcon() if needed
-8. Add new icons to `SplashScreen.jsx` getIcon() for topics
-
-## Available Icons
-
-### HomeScreen Icons
-- `quiz` - Lightbulb
-- `maths` - Calculator
-- `french` - Translation/language
-
-### SplashScreen Icons
-- `rocket` - Space/tech
-- `book` - Books/reading
-- `film` - Movies
-- `globe` - Geography
-- `music` - Music
-- `plus` - Addition
-- `times` - Multiplication (X symbol)
-- `divide` - Division
-- `fraction` - Fractions
-- `puzzle` - Word problems
-- `palette` - Colours/art
-- `paw` - Animals
-- `utensils` - Food
-- `speech` - Conversation/greetings
-- `people` - Family/people
-
-## Colour Theme
-
-### Available Colours
-- `purple` - Primary accent
-- `blue` - Secondary accent
-- `pink` - Tertiary accent
-- `green` - Success/nature
-- `cyan` - Info/cool accent
-
-### Custom Tailwind Colours (tailwind.config.js)
-```javascript
-colors: {
-  'cyber-dark': '#0a0a0f',
-  'cyber-darker': '#050508',
-  'cyber-purple': '#8b5cf6',
-  'cyber-purple-light': '#a78bfa',
-  'cyber-blue': '#3b82f6',
-  'cyber-blue-light': '#60a5fa',
-  'cyber-pink': '#ec4899',
-  'cyber-cyan': '#22d3ee',
-}
-```
-
-## Component Props Reference
-
-### HomeScreen
-```jsx
-<HomeScreen onSelectCategory={(categoryId) => {}} />
-```
-
-### SplashScreen
-```jsx
-<SplashScreen
-  onStartQuiz={(quizId) => {}}
-  quizzes={quizDataObject}
-  onGoHome={() => {}}
-  categoryTitle="Category Name"
-/>
-```
-
-### QuizCard
-```jsx
-<QuizCard
-  question={questionObject}
-  questionNumber={1}
-  totalQuestions={5}
-  selectedAnswer={null|0|1|2|3}
-  isAnswerRevealed={false}
-  onAnswerSelect={(answerIndex) => {}}
-  onNextQuestion={() => {}}
-  onGoHome={() => {}}
-  quizTitle="Quiz Title"
-/>
-```
-
-### ResultsScreen
-```jsx
-<ResultsScreen
-  score={5}
-  totalQuestions={5}
-  onPlayAgain={() => {}}
-  onGoHome={() => {}}
-  quizTitle="Quiz Title"
-/>
-```
-
-## Key Features
-
-### Random Question Selection
-Uses Fisher-Yates shuffle to randomly select 5 questions from a pool of 30:
-```javascript
-function shuffleArray(array) {
-  const shuffled = [...array]
-  for (let i = shuffled.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.0",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.24",
+    "tailwindcss": "^3.3.2",
+    "vite": "^4.3.9"
   }
-  return shuffled
-}
-
-function getRandomQuestions(questionPool, count) {
-  const shuffled = shuffleArray(questionPool)
-  return shuffled.slice(0, count)
 }
 ```
 
-### Answer Reveal System
-- User clicks answer → answer is selected and revealed
-- Correct answer highlighted green, wrong answer highlighted red
-- Explanation shown below
-- "Next Question" button appears
+### vite.config.js
+```javascript
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-## Styling Patterns
+export default defineConfig({
+  plugins: [react()],
+})
+```
 
-### Cyberpunk Glow Effects
+### tailwind.config.js
+```javascript
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        // Custom colours here
+      },
+      fontFamily: {
+        // Custom fonts here
+      },
+      animation: {
+        // Custom animations here
+      },
+    },
+  },
+  plugins: [],
+}
+```
+
+### postcss.config.js
+```javascript
+export default {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+}
+```
+
+### index.css
 ```css
-.shadow-glow-purple { box-shadow: 0 0 20px rgba(139, 92, 246, 0.5); }
-.shadow-glow-blue { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
-.shadow-glow-pink { box-shadow: 0 0 20px rgba(236, 72, 153, 0.5); }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom global styles here */
 ```
 
-### Card Pattern
+## React Patterns
+
+### Component Structure
 ```jsx
-<div className="p-6 rounded-2xl bg-cyber-dark/50 border-2 border-color/30
-               hover:border-color transition-all duration-300
-               hover:scale-[1.02] active:scale-[0.98]">
+function ComponentName({ prop1, prop2, onAction }) {
+  // State
+  const [value, setValue] = useState(initialValue)
+
+  // Handlers
+  const handleClick = () => {
+    onAction(value)
+  }
+
+  // Render
+  return (
+    <div className="tailwind-classes">
+      {/* JSX content */}
+    </div>
+  )
+}
+
+export default ComponentName
+```
+
+### State Management with useState
+```jsx
+const [state, setState] = useState(initialValue)
+const [object, setObject] = useState({ key: 'value' })
+const [array, setArray] = useState([])
+```
+
+### Optimised Callbacks with useCallback
+```jsx
+const handleAction = useCallback((param) => {
+  // Logic here
+  setState(newValue)
+}, [dependencies])
+```
+
+### Conditional Rendering
+```jsx
+{condition && <Component />}
+{condition ? <ComponentA /> : <ComponentB />}
+```
+
+### List Rendering
+```jsx
+{items.map((item) => (
+  <Component key={item.id} data={item} />
+))}
+```
+
+## Tailwind CSS Patterns
+
+### Responsive Design
+```jsx
+<div className="text-sm md:text-base lg:text-lg">
+  {/* sm: mobile, md: tablet, lg: desktop */}
+</div>
+```
+
+### Hover/Active States
+```jsx
+<button className="bg-blue-500 hover:bg-blue-600 active:bg-blue-700">
+```
+
+### Transitions
+```jsx
+<div className="transition-all duration-300 ease-in-out">
+```
+
+### Flexbox Layout
+```jsx
+<div className="flex items-center justify-between gap-4">
+```
+
+### Grid Layout
+```jsx
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+```
+
+### Custom Shadows/Glows
+```javascript
+// In tailwind.config.js
+boxShadow: {
+  'glow': '0 0 20px rgba(139, 92, 246, 0.5)',
+}
 ```
 
 ### Gradient Text
 ```jsx
-<h1 className="bg-gradient-to-r from-cyber-purple-light via-cyber-pink
-               to-cyber-blue-light bg-clip-text text-transparent">
+<h1 className="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
 ```
+
+### Card Pattern
+```jsx
+<div className="p-6 rounded-2xl bg-white/10 border border-gray-200
+               shadow-lg hover:shadow-xl transition-all duration-300">
+```
+
+## Data Structure Patterns
+
+### Exporting Data
+```javascript
+// src/data/dataFile.js
+export const dataObject = {
+  category: {
+    id: 'category',
+    title: 'Category Title',
+    items: [
+      { id: 1, name: 'Item 1', value: 'data' },
+      { id: 2, name: 'Item 2', value: 'data' },
+    ]
+  }
+}
+```
+
+### Importing Data
+```javascript
+import { dataObject } from './data/dataFile'
+```
+
+## SVG Icons Pattern
+
+Inline SVG icons for flexibility:
+```jsx
+<svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M..." />
+</svg>
+```
+
+Icon source: [Heroicons](https://heroicons.com/)
 
 ## Scripts
 
 ```bash
-npm run dev      # Start development server
+npm install      # Install dependencies
+npm run dev      # Start development server (localhost:5173)
 npm run build    # Build for production
-npm run preview  # Preview production build
+npm run preview  # Preview production build locally
 ```
 
-## Deployment
+## Vercel Deployment
 
-Configured for Vercel deployment. Just connect the GitHub repo to Vercel.
+### Setup
+1. Push code to GitHub repository
+2. Connect repository to Vercel (vercel.com)
+3. Vercel auto-detects Vite configuration
 
-Build settings:
-- Framework: Vite
-- Build command: `npm run build`
-- Output directory: `dist`
+### Build Settings (auto-detected)
+- Framework Preset: Vite
+- Build Command: `npm run build`
+- Output Directory: `dist`
+- Install Command: `npm install`
 
-## GitHub Repository
+### Environment Variables
+Add in Vercel dashboard: Settings → Environment Variables
 
-https://github.com/mjburley/daily-trivia
+### Custom Domain
+Add in Vercel dashboard: Settings → Domains
+
+## File Naming Conventions
+
+- Components: `PascalCase.jsx` (e.g., `HomeScreen.jsx`)
+- Data files: `camelCase.js` (e.g., `userData.js`)
+- CSS files: `kebab-case.css` or `index.css`
+- Utilities: `camelCase.js` (e.g., `helpers.js`)
+
+## Best Practices
+
+1. **Components**: One component per file, export as default
+2. **State**: Lift state up to the lowest common ancestor
+3. **Props**: Destructure props in function parameters
+4. **Styling**: Use Tailwind utilities, avoid custom CSS where possible
+5. **Data**: Keep static data in `/data` folder, separate from components
+6. **Keys**: Always use unique `key` prop when mapping arrays
+7. **Events**: Prefix handlers with `handle` (e.g., `handleClick`)
+8. **Callbacks**: Prefix callback props with `on` (e.g., `onSubmit`)
